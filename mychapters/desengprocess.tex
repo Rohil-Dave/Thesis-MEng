@@ -33,7 +33,6 @@ Just like in traditional garment manufacture the project separates garment desig
     \includegraphics[width = \textwidth]{Images/finishedgarmentsilhoutte.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
     \caption{Workshop measurement taking diagram}
     \copyright {Birgitta Helmersson} % this prints the caption below the figure
-    \label{} % this internally labels the figure for future referencing.
 \end{figure}
 She designates this block to be a skill level 3 out of 5, being suitable for confident beginners. To make these garments no large paper patterns are required, simply the designs are cut out and drawn directly onto the fabric. For the pieces Ms. Helmersson keeps constant, she provides small printable templates.
 
@@ -44,7 +43,6 @@ She claims the size chart is designed with around 25 cm of ease. This value is i
     \includegraphics[width = 0.5\textwidth]{Images/BH size chart.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
     \caption{Helmersson's Shirt pattern sizing chart}
     \copyright {Birgitta Helmersson} % this prints the caption below the figure
-    \label{} % this internally labels the figure for future referencing.
 \end{figure}
 Her chart only considers the max chest/bust and max hip measurements to base sizing on. The fabric width is 31 cm greater than the largest max circumference given (here it is the hip). Given that the ease is 25cm, the remaining 6 cm is the seam allowance around the width of the pattern. This 6 cm value is used in the project when scaling the pattern.
 
@@ -62,7 +60,6 @@ Now that the original garment type is understood, we can dissect the pattern int
     \centering % puts the image in the horizontal centre of the page
     \includegraphics[width = 0.75\textwidth]{Images/originalpattern_whole.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
     \caption{Shirt block pattern}
-    \label{} % this internally labels the figure for future referencing.
 \end{figure}
 
 \begin{itemize}
@@ -77,7 +74,6 @@ Now that the original garment type is understood, we can dissect the pattern int
     \centering % puts the image in the horizontal centre of the page
     \includegraphics[width = 0.75\textwidth]{Images/originalpattern_pieces.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
     \caption{Shirt block pattern pieces}
-    \label{} % this internally labels the figure for future referencing.
 \end{figure}
 There are a total of nine (1x body, 2x neck facing, 4x collar, 2x sleeve) pieces that make up the block. Note that D and E combine to form the sleeve piece. There are no side seams on the shirt as there is just a single body piece, not a separate front and back.
 
@@ -85,12 +81,11 @@ There are a total of nine (1x body, 2x neck facing, 4x collar, 2x sleeve) pieces
     \centering % puts the image in the horizontal centre of the page
     \includegraphics[width = 0.75\textwidth]{Images/pattern params.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
     \caption{Pattern Parameters Diagram}
-    \label{} % this internally labels the figure for future referencing.
 \end{figure}
 \begin{table} [H] % this tells the compiler that a table environment is starting
     \centering % this puts it in the horizontal centre of the page
     %\rowcolors{1}{}{Gray} % this sets up the alternating grey/white background
-    \begin{tabular}{p{2cm}|p{6cm}} % this sets up the tabular environment ant states the width of the columns, you could use an equation here using the \textwidth, but i have no experience with this. 
+    \begin{tabular}{p{2cm}|p{5cm}} % this sets up the tabular environment ant states the width of the columns, you could use an equation here using the \textwidth, but i have no experience with this. 
     
         %the following lines populate the table with data. They follow the pattern
         % item & item & item & item \\
@@ -108,7 +103,6 @@ There are a total of nine (1x body, 2x neck facing, 4x collar, 2x sleeve) pieces
         al& armhole length
         \end{tabular}
     \caption{Pattern Parameters Table}
-    \label{tab:ex_tab}
 \end{table}
 
 The process for parameterising was based on traditional measurements professionals use for a tailored shirt. How these measurements can translate into algorithm for the pattern parameterisation was investigated.
@@ -193,7 +187,6 @@ The DXF file format is a standard of digital garment patterns. This format can b
     \centering % puts the image in the horizontal centre of the page
     \includegraphics[width = \textwidth]{Images/example dxfs.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
     \caption{Examples of DXF pattern outputs in ezdxf viewer}
-    \label{} % this internally labels the figure for future referencing.
 \end{figure}
 
 
@@ -203,7 +196,6 @@ CLO 3D has some added requirements. Each pattern piece created via DXF needs to 
     \centering % puts the image in the horizontal centre of the page
     \includegraphics[width = \textwidth]{Images/dxf viewer.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
     \caption{Layer toggle feature in ezdxf viewer}
-    \label{} % this internally labels the figure for future referencing.
 \end{figure}
 
 Sometimes, these segments had to be manipulated in Adobe Illustrator to get the shapes to close and be usable in CLO 3D. Defining layers easily allowed for paths to be joined with out affecting other pieces. A future enhancement would be to get this to work directly out of Python and ezdxf settings. This process does generate a DXF file suitable for CLO 3D, and once the appropriate sewing properties are defined and pieces are positioned, the garment gets draped onto an avatar. This can then be rendered and shown to the end user as a base visual indication of fit and style.
@@ -214,7 +206,6 @@ Along with the DXF file, a PDF file is also provided including annotated dimensi
     \centering % puts the image in the horizontal centre of the page
     \includegraphics[width = \textwidth]{Images/example pdf output.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
     \caption{Example PDF pattern output with annotated dimensions}
-    \label{} % this internally labels the figure for future referencing.
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
@@ -268,7 +259,6 @@ The pattern file creation assumes that the pattern width will fall along the bol
     \centering % puts the image in the horizontal centre of the page
     \includegraphics[width = 0.6\textwidth, angle=90]{Images/pw along bolt.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
     \caption{Regular layout diagram}
-    \label{} % this internally labels the figure for future referencing.
 \end{figure}
 Given the person’s measurements and the bolt width, it is possible that the pattern may not fit inside the bolt as intended. Here are four mitigation strategies for these cases. Note these are only applicable when the ‘ideal’ bolt width is unavailable and some cut loss will definitely occur. Complex, sophisticated fitting algorithms are outside the scope of this study.
 \subsubsection{Rotation}
@@ -279,7 +269,6 @@ Waste = (bolt width - pattern height) * pattern width
     \centering % puts the image in the horizontal centre of the page
     \includegraphics[width = 0.8\textwidth]{Images/ph along bolt.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
     \caption{Rotation diagram}
-    \label{} % this internally labels the figure for future referencing.
 \end{figure}
 
 \subsubsection{Symmetry}
@@ -288,7 +277,6 @@ Break the pattern into two rectangles using the pattern symmetry along the centr
     \centering % puts the image in the horizontal centre of the page
     \includegraphics[width = 0.8\textwidth]{Images/symmetry split.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
     \caption{Symmetry diagram}
-    \label{} % this internally labels the figure for future referencing.
 \end{figure}
 \subsubsection{Insert Panel}
 Depending on the pattern dimensions it might be less wasteful to insert a panel to the centre of the pattern to get to desired pattern width. The length the cut is made on determines the added waste area.
@@ -297,7 +285,6 @@ The caveat is that the centre panel should not be less than 25 cm as it will aff
     \centering % puts the image in the horizontal centre of the page
     \includegraphics[width = 0.8\textwidth, angle=90]{Images/added panel.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
     \caption{Insert panel diagram}
-    \label{} % this internally labels the figure for future referencing.
 \end{figure}
 \subsubsection{Breakout}
 Break the pattern into four rectangles; a split between the bodice section (inclusive neck facings) and the combined sleeve and collar piece sections along and a split down the centre back line. This is for the edge case where the previous 3 strategies do not work or lead to excessive waste.
@@ -305,7 +292,6 @@ Break the pattern into four rectangles; a split between the bodice section (incl
     \centering % puts the image in the horizontal centre of the page
     \includegraphics[width = 0.6\textwidth, angle=90]{Images/break into 4.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
     \caption{Breakout diagram}
-    \label{} % this internally labels the figure for future referencing.
 \end{figure}
 
 
@@ -354,7 +340,6 @@ The first step was to take body measurements. This was needed not only for the p
     \centering % puts the image in the horizontal centre of the page
     \includegraphics[width = \textwidth]{Images/Measurement Taking Guide.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
     \caption{Workshop measurement taking instructions}
-    \label{} % this internally labels the figure for future referencing.
 \end{figure}
 \begin{enumerate}
     \item \textbf{Desired Shirt Length:} Measure from the most prominent bone at base of neck to where you want the shirt to end backside.
@@ -419,7 +404,6 @@ To calculate the shirt length for the Mendeley scans the following measurements 
     \centering % puts the image in the horizontal centre of the page
     \includegraphics[width = 0.5\textwidth]{Images/HBC TM.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
     \caption{Half Back Center TM diagram}
-    \label{} % this internally labels the figure for future referencing.
 \end{figure}
 To calculate the shirt length, we will add the waist height to the half back center and substract the crotch height from it.
 
