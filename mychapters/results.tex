@@ -1,7 +1,7 @@
 \chapter{Results}
 
 \section{Workshop Study}
-Descrition using max circ and shirt length
+Description using max circ and shirt length
 
 Finished garment eases per body area over 6 finished participants
 
@@ -41,19 +41,23 @@ All body measurements used in the workshop were rounded up to 0.5cm ceilings. Wh
     \caption{Finished Garment eases for workshop participants}
 \end{figure}
 
-Add likert scale plots
+\textbf{Add likert scale plots as follows, "horizontally" per person to identify if a body type specific was not fitted well, and "vertically" per body area to identify if a body area in general was not fitted well}
 
 \subsubsection{Fabric Use}
-Efficiency, bolt width, cut loss width, and cut loss area for 100 scans study comparing ideal bolt and actual used bolt.
+Efficiency, bolt width, cut loss width, and cut loss area for Workshop Study comparing ideal bolt and actual used bolt.
 \begin{figure} [H] % opens the figure environment. the '[H]' forces the image to be Here
     \centering % puts the image in the horizontal centre of the page
     \includegraphics[width = 0.75\textwidth]{Images/Workshop_Plot.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
     \caption{Used and Ideal Efficiency Metrics for Workshop Study}
 \end{figure}
+All efficiencies when using ideal bolt width are greater than 95\%. 
 
 
 
 \section{100 Body Scans Study findings}
+Description using max circ and shirt length
+
+Efficiency metrics for ideal (do we still compare with 150?)
 \subsection{Distibutions}
 100 Scans Study persons have a mean maximum bodice circumferemce of 99.58 cm, median of 98.25 cm and a standard deviation of 8.61 cm. The mean shirt length is  cm, median of  cm, and a standard deviation of  cm.
 
@@ -84,105 +88,48 @@ When using the ideal bolt width, the mean efficiency is 98\%, median efficiency 
 \end{figure}
 
 Cohort analysis
-\begin{verbatim}
-For bolt width 110
-efficiency_used Mean: 0.8172272727272727
-efficiency_used Median: 0.8363636363636363
-efficiency_used Standard Deviation: 0.06112003837457149
-cut_loss_area_used Mean: 2620.64
-cut_loss_area_used Median: 2318.0
-cut_loss_area_used Standard Deviation: 889.3173086137477
+\begin{table} [H] % this tells the compiler that a table environment is starting
+    \centering % this puts it in the horizontal centre of the page
+    %\rowcolors{1}{}{Gray} % this sets up the alternating grey/white background
+    \begin{tabular}{p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}} % this sets up the tabular environment ant states the width of the columns, you could use an equation here using the \textwidth, but i have no experience with this. 
+        %the following lines populate the table with data. They follow the pattern
+        % item & item & item & item \\
+        % where the ampersand denotes a vertical line, and the double slash, a new line.
+        \textbf{Bolt Width} & \textbf{Mean Eff} & \textbf{Median Eff} & \textbf{St Dev Eff} & \textbf{Mean Loss Area} & \textbf{Median Loss Area} & \textbf{St Dev Loss Area}\\
+        \hline % this produces a horizontal line, this could be used elsewhere in the table
+        110& 81.7\% & 83.6\% & 6.1\% & 2620.64 & 2318.0 & 889.32\\
+        115& 78.5\% & 80.0\% & 6.0\% & 3233.87 & 2922.75 & 937.46\\
+        120& 76.2\% & 77.1\% & 7.4\% & 3737.44 & 3556.88 & 1207.17\\
+        125& 78.7\% & 75.6\% & 12.1\% & 3526.84 & 4025.0 & 2097.15\\
+        130& 83.7\% & 91.7\% & 13.5\% & 2771.99 & 934.5 & 2542.75\\
+        135& 87.9\% & 92.9\% & 12.3\% & 1997.82 & 843.0 & 2501.29\\
+        140& 88.8\% & 91.1\% & 9.2\% & 1716.44 & 1131.0 & 2025.64\\
+        145& 87.3\% & 88.1\% & 8.1\% & 1865.09 & 1491.63 & 1849.15\\
+        150& 85.2\% & 85.5\% & 7.1\% & 2158.84 & 1890.75 & 1679.22\\
+        155& 83.3\% & 83.1\% & 6.2\% & 2418.42 & 2333.63 & 1388.62\\
+        160& 81.2\% & 80.6\% & 5.4\% & 2752.84 & 2795.13 & 1076.74\\
+        165& 79.1\% & 78.3\% & 5.2\% & 3089.52 & 3250.13 & 782.20\\
+        \end{tabular}
+    \caption{Description of Cohort Analysis on Different Bolts for 100 Scans Study}
+\end{table}
+\textbf{SHOULD CHANGE FORMAT OF GRAPHS BELOW BECAUSE NOT CONTINOUS???}
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/Cut Loss Mean for Different Bolt Widths for 100 scans.png}
+        \caption{Cut Loss Area}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/Eff Mean for Different Bolt Widths for 100 scans.png}
+        \caption{Efficiency}
+    \end{subfigure}
+    \caption{Mean Cut Loss Area Used and Efficiency Used for Different Bolt Widths for 100 Scans Study}
+\end{figure}
 
-For bolt width 115
-efficiency_used Mean: 0.7846956521739128
-efficiency_used Median: 0.8
-efficiency_used Standard Deviation: 0.060083369930081405
-cut_loss_area_used Mean: 3233.865
-cut_loss_area_used Median: 2922.75
-cut_loss_area_used Standard Deviation: 937.4587907076235
-
-For bolt width 120
-efficiency_used Mean: 0.7622500000000001
-efficiency_used Median: 0.7708333333333334
-efficiency_used Standard Deviation: 0.07380252366958734
-cut_loss_area_used Mean: 3737.44
-cut_loss_area_used Median: 3556.875
-cut_loss_area_used Standard Deviation: 1207.1684768084363
-
-For bolt width 125
-efficiency_used Mean: 0.78652
-efficiency_used Median: 0.756
-efficiency_used Standard Deviation: 0.12139279056023056
-cut_loss_area_used Mean: 3526.84
-cut_loss_area_used Median: 4025.0
-cut_loss_area_used Standard Deviation: 2097.150328278829
-
-For bolt width 130
-efficiency_used Mean: 0.8370769230769229
-efficiency_used Median: 0.9173076923076924
-efficiency_used Standard Deviation: 0.13486956223169128
-cut_loss_area_used Mean: 2771.99
-cut_loss_area_used Median: 934.5
-cut_loss_area_used Standard Deviation: 2542.7475641321535
-
-For bolt width 135
-efficiency_used Mean: 0.8791851851851853
-efficiency_used Median: 0.9296296296296296
-efficiency_used Standard Deviation: 0.12263318115152018
-cut_loss_area_used Mean: 1997.815
-cut_loss_area_used Median: 843.0
-cut_loss_area_used Standard Deviation: 2501.28740817104
-
-For bolt width 140
-efficiency_used Mean: 0.888107142857143
-efficiency_used Median: 0.9107142857142857
-efficiency_used Standard Deviation: 0.09240419059098733
-cut_loss_area_used Mean: 1716.44
-cut_loss_area_used Median: 1131.0
-cut_loss_area_used Standard Deviation: 2025.6374827199463
-
-For bolt width 145
-efficiency_used Mean: 0.8732758620689655
-efficiency_used Median: 0.8810344827586207
-efficiency_used Standard Deviation: 0.08091241723482498
-cut_loss_area_used Mean: 1865.09
-cut_loss_area_used Median: 1491.625
-cut_loss_area_used Standard Deviation: 1849.1465333769522
-
-For bolt width 150
-efficiency_used Mean: 0.8519666666666669
-efficiency_used Median: 0.855
-efficiency_used Standard Deviation: 0.07106819104056172
-cut_loss_area_used Mean: 2158.84
-cut_loss_area_used Median: 1890.75
-cut_loss_area_used Standard Deviation: 1679.2237014168184
-
-For bolt width 155
-efficiency_used Mean: 0.8329677419354837
-efficiency_used Median: 0.8306451612903225
-efficiency_used Standard Deviation: 0.06241344474812926
-cut_loss_area_used Mean: 2418.415
-cut_loss_area_used Median: 2333.625
-cut_loss_area_used Standard Deviation: 1388.6237018267402
-
-For bolt width 160
-efficiency_used Mean: 0.8117187499999998
-efficiency_used Median: 0.80625
-efficiency_used Standard Deviation: 0.05407491728784705
-cut_loss_area_used Mean: 2752.84
-cut_loss_area_used Median: 2795.125
-cut_loss_area_used Standard Deviation: 1076.7399033192744
-
-For bolt width 165
-efficiency_used Mean: 0.7913939393939395
-efficiency_used Median: 0.7833333333333333
-efficiency_used Standard Deviation: 0.05219994054086801
-cut_loss_area_used Mean: 3089.515
-cut_loss_area_used Median: 3250.125
-cut_loss_area_used Standard Deviation: 782.1969140024779
-\end{verbatim}
-
-Best bolt for the cohort is 135/140 ??
+For this cohort, using a 140 cm wide fabric bolt minimises the cut loss area and maximises the efficiency.
 
 Count of pattern orientation on starting fabric and possibility of embellishment potential for various bolt widths ranging from 110 to 160 cm.
 \begin{figure} [H] % opens the figure environment. the '[H]' forces the image to be Here
@@ -190,5 +137,6 @@ Count of pattern orientation on starting fabric and possibility of embellishment
     \includegraphics[width = \textwidth]{Images/Mendeley_Bar.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
     \caption{Layout and Embellishment Possibility for 100 Scans Study}
 \end{figure}
+For the range of bolt widths between 110 and 160 cm, each pattern generated for the Mendeley dataset participants will fit in the regular or rotated orientation. No mitigation strategies need to be employed within this range of bolts.
 
-ADD recoup of cut loss area due to embellishment
+\textbf{ADD recoup of cut loss area due to embellishment}
