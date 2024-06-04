@@ -4,12 +4,10 @@ Summarize the breakdown of the des eng process here ??.
 \section{Research Aims and Goals}
 
 \subsection{Context and Rationale}
-The primary objective of this project is to address the pressing issue of fabric waste within garment manufacturing, specifically focusing on zero-waste pattern design for independent fashion designers. Unlike large-scale industry production, which often overlooks fabric efficiency due to economic and logistical constraints, this project targets the smaller-scale, flexible domain of home sewers who can more readily adopt innovative and sustainable practices. Leveraging design thinking skills, this project aims to create a parameterized zero-waste pattern for a short-sleeved collared shirt, exploring the intricate balance between zero-waste design principles and achieving an optimised fit.
+This project addresses fabric waste in garment manufacturing by aiming to make zero-waste pattern making more accessible and inclusive. It seeks to resolve the lack of parameterisation methods for zero-waste patterns and the inability of current patterns to provide a good fit for diverse body types. Custom sizing for individuals enhances the garment's value to the wearer, but introducing more fit can lead to increased cut loss. Therefore, the project aims to present methods to recoup cut loss through creative reuse for increased garment utility. Additionally, the project aims to leverage virtual draping tools to provide visual representations before users commit to production.
 
 \subsection{Scope}
-
-
-This project is not concerned with developing a new zero waste pattern design.
+This project targets the smaller-scale operations that can more readily adopt innovative and sustainable practices. The aim is to create a framework enabling bespoke zero-waste pattern creation for both physical production and virtual modelling. Patterns that are true zero-waste and minimum-waste are created. The framework aims to provide analytics on fabric use efficiency to enable informed decisions. The project is prioritises fit around the bodice over arms. Physical testing in a workshop study is used for evaluating the parameterisation method on fit. Theoretical analysis on a publicly available dataset is used for evaluating the parameterisation on fabric efficiency and cut loss metrics. Integration of fabric properties and analysis production costs are not considered. The project is not concerned with the mass production of garments but rather the creation of a single garment for an individual. This project selects one existing zero-waste pattern to parameterise and is not concerned with developing a new pattern design. The author is not trained in fashion practice and instead applies design engineering methods to introduce novel innovation. Python is used for parameterisation, pattern file generation, and efficiency analysis. CLO 3D is used for virtual draping.
 
 \subsection{Goals}
 Key goals of the project include:
@@ -74,16 +72,11 @@ Now that the original garment type is understood, we can dissect the pattern int
 \newpage
 \begin{figure} [H] % opens the figure environment. the '[H]' forces the image to be Here
     \centering % puts the image in the horizontal centre of the page
-    \includegraphics[width = 0.75\textwidth]{Images/originalpattern_pieces.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
+    \includegraphics[width = \textwidth]{Images/originalpattern_pieces.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
     \caption{Shirt block pattern pieces}
 \end{figure}
 There are a total of nine (1x body, 2x neck facing, 4x collar, 2x sleeve) pieces that make up the block. Note that D and E combine to form the sleeve piece. There are no side seams on the shirt as there is just a single body piece, not a separate front and back.
 
-\begin{figure} [H] % opens the figure environment. the '[H]' forces the image to be Here
-    \centering % puts the image in the horizontal centre of the page
-    \includegraphics[width = 0.75\textwidth]{Images/pattern params.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
-    \caption{Pattern Parameters Diagram}
-\end{figure}
 \begin{table} [H] % this tells the compiler that a table environment is starting
     \centering % this puts it in the horizontal centre of the page
     %\rowcolors{1}{}{Gray} % this sets up the alternating grey/white background
@@ -94,11 +87,11 @@ There are a total of nine (1x body, 2x neck facing, 4x collar, 2x sleeve) pieces
         % where the ampersand denotes a vertical line, and the double slash, a new line.
         \textbf{Shortform} & \textbf{Parameter}\\
         \hline % this produces a horizontal line, this could be used elsewhere in the table
-        pw&  pattern width\\
-        ph&  pattern height\\
-        cw&  collar piece width\\
-        ch&  collar piece height\\
-        bw&  neck facing width\\
+        pw& pattern width\\
+        ph& pattern height\\
+        cw& collar piece width\\
+        ch& collar piece height\\
+        bw& neck facing width\\
         bh& neck facing height\\
         sd& sleevehead curve depth\\
         sr& sleevehead curve radius\\
@@ -106,6 +99,11 @@ There are a total of nine (1x body, 2x neck facing, 4x collar, 2x sleeve) pieces
         \end{tabular}
     \caption{Pattern Parameters Table}
 \end{table}
+\begin{figure} [H] % opens the figure environment. the '[H]' forces the image to be Here
+    \centering % puts the image in the horizontal centre of the page
+    \includegraphics[width = \textwidth]{Images/pattern params.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
+    \caption{Pattern Parameters Diagram}
+\end{figure}
 
 The process for parameterising was based on traditional measurements professionals use for a tailored shirt. How these measurements can translate into algorithm for the pattern parameterisation was investigated.
 
@@ -116,22 +114,28 @@ The fit around the bodice is the primary factor to be customised. Given this, th
 The placement of the notches used to determine the finished pleat size and the button placket are also kept constant for everyone. For now, the general ease of the garment will also be constant with Helmersson's suggestion of 25 cm. Results from the workshop may reveal that general ease should be dependent on some measurement factor.
 
 The collar piece height also influences the overall pattern height. The height of the body piece (A) plus the collar piece height equals the total pattern height. From the center back linein the pattern, it is evident that the height of the body piece can be related to the shirt length measured from the center back base of the neck to the finished hem at the bottom. Shirt length is a personal choice and not a strict body measurement based input. The garment will employ a standard shirt 2.5 cm hem at the bottom for a clean finished. This hem allowance must be considered as it will come from the original fabric piece in maintaining zero waste design.
-
-pattern height = desired shirt length + collar piece height + hem allowance
+\begin{equation}
+    \mathrm{pattern\ height} = \mathrm{desired\ shirt\ length} + \mathrm{collar\ piece\ height} + \mathrm{hem\ allowance}
+    \label{eq:pattern height}
+\end{equation}
 
 with shortform and constants,
 
-ph = desired shirt length + ch + hem allowance
+$ph = desired shirt length + ch + hem allowance$
 
-ph = desired shirt length + 25 + 2.5
+if shirt length is 65 cm 
+
+$ph = desired shirt length + 25 + 2.5$
 
 The parameterisation assumes the pattern with will be equal to the largest circumference of the bodice plus the general ease and sew allowance for the body. We still intend to keep the aesthetic of the garment while provide fit to extend garment utility in terms of more wear time/uses.
-
-pattern width = largest bodice circumference + general ease + sew allowance
+\begin{equation}
+    \mathrm{pattern\ width} = \mathrm{largest\ bodice\ circumference} + \mathrm{general\ ease} + \mathrm{sew\ allowance}
+    \label{eq:pattern width}
+\end{equation}
 
 with short and constants,
 
-pw = largest bodice circumference + 25 + 6
+$pw = largest bodice circumference + 25 + 6$
 
 From the pattern, it is clear that scaling pattern width had an effect on the sleeve pieces. The collar piece widths (cw) are kept constant. By looking at the top border of the pattern, we see that pattern width also equals four collar piece widths plus two (one for each sleeve piece) top edge segments of the of the sleeve.
 
