@@ -9,24 +9,25 @@ The primary objective of this project is to address the pressing issue of fabric
 \subsection{Scope}
 The overarching aim of this project is to develop a method to parameterize a zero-waste pattern, to test the parameterisation in a workshop setting for adoption by domestic sewers, check fit and comfort, and finally to run efficiency analysis on workshop participants and publicly available body measurement data.
 
-The chosen garment for this study is a short-sleeved collared shirt block, as detailed in Birgitta Helmersson’s book “Zero Waste Patterns: 20 Projects to Sew Your Own Wardrobe.” This garment is inherently loose-fitting and oversized, presenting a unique challenge in balancing zero-waste principles with a more tailored fit. While this pattern is good, there are other examples of zero waste patterns (e.g. Goldfinch), they all share similar properties and are all amenable to similar parameterisation and analysis. This project is not concerned with developing a new zero waste pattern design.
+This project is not concerned with developing a new zero waste pattern design.
 
 \subsection{Goals}
 Key goals of the project include:
 \begin{itemize}
-    \item Parameterising the Zero-Waste Pattern: Develop a scalable pattern for the short-sleeved collared shirt, ensuring that it can be adjusted based on individual body measurements while maintaining the principles of zero-waste design. This involves creating a flexible pattern that domestic sewers can adapt to different sizes without generating fabric waste.
-    \item Exploring Fit and Style Contradictions: Investigate the inherent contradiction between zero-waste design and garment fit. Zero-waste garments often have a loose, oversized nature, which can lead to compromises on fit and style. This project aims to explore these contradictions and find innovative solutions to achieve a better balance between zero-waste principles and a desirable fit.
-    \item Optimising Fabric Utilisation: Compute the ideal fabric bolt width for various body measurements, assessing the trade-offs when using different bolt widths to minimise fabric cut loss. By optimising fabric utilisation, the project seeks to enhance the efficiency of zero-waste pattern design
-    \item Fabric Cut Loss Recoupment: Explore creative ways to utilise any fabric cut loss that may arise from the pattern. This includes repurposing fabric offcuts for embellishments or additional garment features, thereby enhancing the overall utility and aesthetic of the garment. This approach not only minimises waste but also adds value to the final product. The project focuses on defining strategies for retaking cut loss and how it can be scaled and customised.
-    \item Cohort Analysis: Run the parameterisation algorithm on a publicly available body scan data set and analyse the efficiency metrics. These metrics will be run for ‘ideal’ bolt width as well as a range of industry standard bolt widths. The project will also compute embellishment savings where possible.
+    \item Parameterise the selected zero-waste attern: Develop a method that successfully takes in measurements and outputs a pattern that creates the intended garment.
+    \item Optimise fabric utilisation: Compute the ideal fabric bolt width for a given pattern's dimensions.
+    \item Analyse fit, style, and waste trade-offs: Present fabric efficiency and cut loss metrics for different preferences for the garment to allow users to make informed decisions before production.
+    \item Recoup cut loss: Define and implement a strategy that repurposes cut loss to enhance the garment's utility and aesthetic appeal.
+    \item Visualise the garment in 3D: Generate pattern files suitable for import into CLO 3D to provide a visual representation of the garment on an avatar.
 \end{itemize}
 
-\section{Approach}
+\section{Methodology}
 
-\subsection{Framework Overview}
+\subsection{tail0r Toolchain}
 
-\subsection{Garment Type: Short-Sleeved Collared Shirt}
+\subsection{Pattern Selection: Short-Sleeved Collared Shirt with Box Pleat}
 Just like in traditional garment manufacture the project separates garment design from parameterisation. This project will parameterise an existing zero waste pattern design, Birgitta Helmersson’s shirt.
+The chosen garment for this study is a short-sleeved collared shirt block, as detailed in Birgitta Helmersson’s book “Zero Waste Patterns: 20 Projects to Sew Your Own Wardrobe.” This garment is inherently loose-fitting and oversized, presenting a unique challenge in balancing zero-waste principles with a more tailored fit.
 
 \begin{figure} [H] % opens the figure environment. the '[H]' forces the image to be Here
     \centering % puts the image in the horizontal centre of the page
@@ -170,7 +171,7 @@ The shapes were simplified not only to make recreating the pattern easier and mo
 % FRAMEWORK OUTPUTS
 %%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Framework Outputs}
+\subsection{tail0r Outputs}
 The program creates the following outputs:
 \begin{enumerate}
     \item A choice of patterns based on user's fit, style, and waste choices.
