@@ -14,9 +14,10 @@ This project is not concerned with developing a new zero waste pattern design.
 \subsection{Goals}
 Key goals of the project include:
 \begin{itemize}
-    \item Parameterise the selected zero-waste attern: Develop a method that successfully takes in measurements and outputs a pattern that creates the intended garment.
+    \item Parameterise the selected zero-waste pattern: Develop a method that successfully takes in measurements and outputs a pattern that creates the intended garment.
     \item Optimise fabric utilisation: Compute the ideal fabric bolt width for a given pattern's dimensions.
     \item Analyse fit, style, and waste trade-offs: Present fabric efficiency and cut loss metrics for different preferences for the garment to allow users to make informed decisions before production.
+    \item Be inclusive: Implement techniques that allow for garment creation for specific fabric sizes and outlier body types.
     \item Recoup cut loss: Define and implement a strategy that repurposes cut loss to enhance the garment's utility and aesthetic appeal.
     \item Visualise the garment in 3D: Generate pattern files suitable for import into CLO 3D to provide a visual representation of the garment on an avatar.
 \end{itemize}
@@ -35,9 +36,9 @@ The chosen garment for this study is a short-sleeved collared shirt block, as de
     \caption{Workshop measurement taking diagram}
     \copyright {Birgitta Helmersson} % this prints the caption below the figure
 \end{figure}
-She designates this block to be a skill level 3 out of 5, being suitable for confident beginners. To make these garments no large paper patterns are required, simply the designs are cut out and drawn directly onto the fabric. For the pieces Ms. Helmersson keeps constant, she provides small printable templates.
+She designates this block to be a skill level 3 out of 5, being suitable for confident beginners. To make these garments no large paper patterns are required, simply the designs are cut out and drawn directly onto the fabric. For the pieces Helmersson keeps constant, she provides small printable templates.
 
-She defines her shirt block as "one size, size determined by fabric width." Below is the sizing chart she provides. It forces the compromise of loose fit for zero waste. 
+She defines her shirt block as ``one size, size determined by fabric width." Below is the sizing chart she provides. It forces the compromise of loose fit for zero waste. 
 She claims the size chart is designed with around 25 cm of ease. This value is inclusive of wearing plus design ease. Wearing ease is the ease required to make natural movements in the garment and design ease is the ease added to maintain the aesthetic shape and style of the garment. Her 25 cm ease is a general ease value that she has applied to the garment as a whole, not individual areas. 
 \begin{figure} [H] % opens the figure environment. the '[H]' forces the image to be Here
     \centering % puts the image in the horizontal centre of the page
@@ -47,7 +48,7 @@ She claims the size chart is designed with around 25 cm of ease. This value is i
 \end{figure}
 Her chart only considers the max chest/bust and max hip measurements to base sizing on. The fabric width is 31 cm greater than the largest max circumference given (here it is the hip). Given that the ease is 25cm, the remaining 6 cm is the seam allowance around the width of the pattern. This 6 cm value is used in the project when scaling the pattern.
 
-The chart only considers widths in a small 20 cm band (fabric widths from 135-155cm, max hip from 104-124cm). Our aim is to use body measurements to figure out ideal pattern width size and make suggestions based on bolt width available. Also, we are not considering the notions (bindings, buttons, iron on interfacings, etc.). These are components of the final garment not sourced from the original rectangle cut from the fabric bolt. These are not part of the waste analysis.
+The chart only considers widths in a small 20 cm band (fabric widths from 135-155 cm, max hip from 104-124 cm). Our aim is to use body measurements to figure out ideal pattern width size and make suggestions based on bolt width available. Also, notions (bindings, buttons, iron on interfacings, etc.) are not considered. These are components of the final garment not sourced from the original rectangle cut from the fabric bolt. These are not part of the waste analysis.
 
 Helmersson employs the constant template sizes for the facing (B) and banded template size for the sleevehead curve (E). She also keeps the collar pieces (C) constant for all users.
 
