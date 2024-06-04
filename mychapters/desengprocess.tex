@@ -4,10 +4,10 @@ Summarize the breakdown of the des eng process here ??.
 \section{Research Aims and Goals}
 
 \subsection{Context and Rationale}
-The primary objective of this project is to address the pressing issue of fabric waste within garment manufacturing, specifically focusing on zero-waste pattern design for independent fashion designers and domestic sewers. Unlike large-scale industry production, which often overlooks fabric efficiency due to economic and logistical constraints, this project targets the smaller-scale, flexible domain of home sewers who can more readily adopt innovative and sustainable practices. Leveraging design thinking skills, this project aims to create a parameterized zero-waste pattern for a short-sleeved collared shirt, exploring the intricate balance between zero-waste design principles and achieving an optimised fit.
+The primary objective of this project is to address the pressing issue of fabric waste within garment manufacturing, specifically focusing on zero-waste pattern design for independent fashion designers. Unlike large-scale industry production, which often overlooks fabric efficiency due to economic and logistical constraints, this project targets the smaller-scale, flexible domain of home sewers who can more readily adopt innovative and sustainable practices. Leveraging design thinking skills, this project aims to create a parameterized zero-waste pattern for a short-sleeved collared shirt, exploring the intricate balance between zero-waste design principles and achieving an optimised fit.
 
 \subsection{Scope}
-The overarching aim of this project is to develop a method to parameterize a zero-waste pattern, to test the parameterisation in a workshop setting for adoption by domestic sewers, check fit and comfort, and finally to run efficiency analysis on workshop participants and publicly available body measurement data.
+
 
 This project is not concerned with developing a new zero waste pattern design.
 
@@ -71,7 +71,7 @@ Now that the original garment type is understood, we can dissect the pattern int
     \item \textbf{D} Sleeve pieces
     \item \textbf{E} Sleevehead curve template
 \end{itemize}
-
+\newpage
 \begin{figure} [H] % opens the figure environment. the '[H]' forces the image to be Here
     \centering % puts the image in the horizontal centre of the page
     \includegraphics[width = 0.75\textwidth]{Images/originalpattern_pieces.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
@@ -179,7 +179,7 @@ The program creates the following outputs:
     \item Fabric usage efficiency metrics using ideal and given bolt widths for pattern choice.
     \item Embellishment strategies and applications for both.
     \item The DXF file that can be loaded into the CLO application for virtual draping and visual fit cues.
-    \item The PDF file with return pattern measurements and annotated pattern image with dimensions that allows home user to draw pattern on fabric and cut it out pattern.
+    \item The PDF file with return pattern measurements and annotated pattern image with dimensions that allows user to draw pattern on fabric and cut it out pattern.
 \end{enumerate}
 
 \subsubsection{DXF Pattern File}
@@ -203,7 +203,7 @@ CLO 3D has some added requirements. Each pattern piece created via DXF needs to 
 Sometimes, these segments had to be manipulated in Adobe Illustrator to get the shapes to close and be usable in CLO 3D. Defining layers easily allowed for paths to be joined with out affecting other pieces. A future enhancement would be to get this to work directly out of Python and ezdxf settings. This process does generate a DXF file suitable for CLO 3D, and once the appropriate sewing properties are defined and pieces are positioned, the garment gets draped onto an avatar. This can then be rendered and shown to the end user as a base visual indication of fit and style.
 
 \subsubsection{PDF Pattern File}
-Along with the DXF file, a PDF file is also provided including annotated dimensions of the pattern. This is a useful document for people at home. It provides all the information needed for measuring, drawing the pattern pieces, and cutting out pieces from the fabric. Labels and dimensions are also presented. This information along with the sewing instructions is what is needed for the user to make the garment themselves. The PDF pattern is made by plotting with matplotlib. An example PDF output is shown below.
+Along with the DXF file, a PDF file is also provided including annotated dimensions of the pattern. It provides all the information needed for measuring, drawing the pattern pieces, and cutting out pieces from the fabric. Labels and dimensions are also presented. This information along with the sewing instructions is what is needed for the user to make the garment themselves. The PDF pattern is made by plotting with matplotlib. An example PDF output is shown below.
 \begin{figure} [H] % opens the figure environment. the '[H]' forces the image to be Here
     \centering % puts the image in the horizontal centre of the page
     \includegraphics[width = \textwidth]{Images/example pdf output.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
@@ -215,9 +215,9 @@ Along with the DXF file, a PDF file is also provided including annotated dimensi
 %%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Fabric Use Efficiency}
-An important goal of this project is to provide the end user domestic sewer / independent fashion designer with efficiency metrics given their prior constraints. This makes it possible for them to evaluate different options and make informed decisions.
+An important goal of this project is to provide the end user independent fashion designer with efficiency metrics given their prior constraints. This makes it possible for them to evaluate different options and make informed decisions.
 
-Initially, the program suggests an industry standard ideal bolt size that minimises waste. There are many different sizes offered and this is dependent on the manufacturer, fabric type, machine used, etc. So we will provide this ideal width assuming you can get in intervals of 5cm. This is also justified as based on Helmersson’s size chart. Any off cuts are less than 4.5cm and average between 2-3 cm. This additional fabric could be used too as increased ease, accepting that compromise to force true zero waste.
+Initially, the program suggests an industry standard ideal bolt size that minimises waste. There are many different sizes offered and this is dependent on the manufacturer, fabric type, machine used, etc. So we will provide this ideal width assuming you can get in intervals of 5cm. This is also justified as based on Helmersson's size chart. Any off cuts are less than 4.5cm and average between 2-3 cm. This additional fabric could be used too as increased ease, accepting that compromise to force true zero waste.
 
 The user might want to use a particular bolt of fabric and / or might not want to buy additional fabric of the ideal width. Repurposing and reusing existing materials is always more efficient than going to buy new fabric and the designer should not encourage the purchase of an entire new bolt just so a single garment is made with it. Additionally, the user may have a specific fabric type in mind they want to use that is not available in ideal bolt width. In these cases, the program takes the desired bolt width into account and a separate set of analyses are run (marked with "used" tag).
 
@@ -241,7 +241,7 @@ efficiency = 100 * (1 - (cut loss area/ (pattern width * pattern height))
 %%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Embellishments}
-Even with a rectangular pattern based on the person’s dimension, there is always the potential for cut loss. This is especially true if the ‘ideal bolt width’ is not available. One way to recoup this cut loss is via embellishments.
+Even with a rectangular pattern based on the person's dimension, there is always the potential for cut loss. This is especially true if the `ideal bolt width' is not available. One way to recoup this cut loss is via embellishments.
 
 Application of embellishments is highly dependent on the creativity of the fashion designer to generate extra utility by repurposing fabric. Embellishments just cannot be random pieces of fabric tacked onto the garment without a design purpose. For this garment type in this study, front chest pockets are a great embellishment that would well complement the shirt design. 
 
