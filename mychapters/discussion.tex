@@ -1,51 +1,40 @@
 \chapter{Discussion}
 
 \section{Method Limitations}
-One notable limitation is the reliance on accurate body measurements to achieve a customisable fit. Manual measurements can introduce human error, while technological solutions such as body scanners may not be universally accessible or affordable.
+manual measure may have error
+scanning tech not as accessible
 
 \section{Data Limitations}
-The data collected for this project primarily involves body measurements and user feedback on fit and fabric utilization. One significant limitation is the sample size, which may not be large enough to capture the full variability in body shapes and sizes. A larger, more diverse sample would provide more comprehensive insights into how well the parameterized pattern accommodates different body types. However we have to make the compromise here given the project timeline and available resources. Additionally, the project relies on self-reported data, which can be subject to biases and inaccuracies. For instance, participants’ subjective assessments of fit and comfort may vary based on personal preferences and experiences. 
+self-reported data, which can be subject to biases and inaccuracies. subjective assessments of fit and comfort may vary based on personal preferences and experiences. 
 
-The data on fabric utilisation also presents limitations. Tthe efficiency of fabric utilization is measured under controlled conditions, which may not accurately reflect real-world sewing practices where additional waste can occur. And creativity of the fashion designer can lead to more complex and intuitive uses for cut loss rather than the predefined embellishment check, for a given random cut loss dimension and area.
-
-We also have to consider the limitation arising from how the data is collected, there is difference between the methods of obtaining measurements, and not all parameterisation methods work the same because of differing measurements used in the workshop vs scan data. It may not be appropriate to always compare them because for more proper comparative analysis we would need 
-
+controlled conditions for waste
 
 \subsection{Workshop Study}
 \subsubsection{Limited Sample Size}
-Limited Data
-Due to time commitments and resource constraints there were only 8 participants in the workshop. Of these, only 6 finished making the garment. Thus the data set is very limited and not amenable to sophisticated statistical analysis. Regardless, findings are presented with that caveat.
+Limited Data, generalising needs more test
+only 8 participants only 6 finished
+time resource constraints
 \subsubsection{Sewing Inconsistency}
 
-Each participant sewed their own garments. There was variability in their ability and the tailoring / sewing was not held constant across all garments. This ability did affect the fit, finish, and comfort values and was not an equitable comparison of the pattern per se but the skill of the participant.
 
 \subsubsection{Parameterisation Improvements}
-Helmersson’s pattern was devised for a rather narrow band of sizes. Some of the elements of the pattern are constant, like the collar, sleevehead curve and the opening for the neck (defined by neck facing). For this project, the pattern had to be generalised for all body shapes and sizes. Scaling factors were applied to these elements which were found to be too aggressive. In retrospect, using neck circumference to influence the neck facing would have been more prudent. This would necessitate changing the seam allowance on the collar piece so that it would align better, especially for smaller necks.
-Design ease for the garment width was held at 25 cm. This should have been made more dynamic and responsive to the largest bodice circumference. This is due to the fact that a constant ease feels tighter on a larger body. These changes might positively affect the fit and comfort of the finished garment. Because changing the general ease value also affects finished size of the sleeves, it is difficult to pinpoint the exact adjustments required without further testing. However, the suggestion would be to increase ease for max bodice circumferences above 100 cm and check the theoretical finished garment shoulder width fits the person's measured shoulder with.
+pattern generalised
+constants: collar, sleevehead curve, neck opening
+agressive scaling factors:
+neck circ should influence neck face
+design should be dynamic, increase ease for circs greater than 100 cm
 
 \section{Framework Limitations}
-
-The service provided by this project, which includes the parameterized zero-waste pattern and guidance on fabric utilization, has inherent limitations. One key limitation is the dependency on users’ willingness and ability to adopt new techniques. Designers accustomed to traditional pattern-making methods may find it challenging to transition to zero-waste designs, especially if they lack prior experience with digital tools or sustainable practices.
-
 Limitations with CLO
 Posture mode is quite static in CLO and does not allow for varied postures
 So we are simulating the fit in many different natural poses
 Does not give much more than a static visual representation of fit
 
-Finally, the scalability of the service presents a challenge. While the project aims to provide a practical solution for designers, the success of the parameterized pattern depends on individual users’ skills and resources. The variability in sewing experience and access to advanced tools can affect the consistency and quality of the outcomes, potentially limiting the service’s effectiveness and reach to a much wider audience.
+\section{Outcome Impact and Potential}
 
 \section{Further Work}
 
-\subsection{Parameterisation Tuning}
-Some of the pieces in the pattern are kept constant (collar) or dictated by a specified template size (neck facing, sleevehead curve). To provide end users with more options to customise these pieces based on their body measurements or personalise aspects of the garment, the geometry of these pieces should be able to be chosen by user on input. For example, the neck facing piece geometry can be influenced by the person's neck measurement and the collar thickness and length be a personal choice. Because there are so many dependencies of other pieces on the overall ease and fit, these were not explored during this phase of Tail0r's development. Allowing user's to customise and personalise further while still maintaining the garment style will require extensive testing and tuning of parameters. It is certainly something to be explored in Tail0r's development.
-
-\subsection{Scalability}
-While the chosen short-sleeved collared shirt block serves as a useful case study, the results may not be directly applicable to other garment types with different structural and fit requirements. This specificity limits the generalisability of the findings to other types of zero-waste garments. However, it is reasonably feasible to develop an arsenal of garments using this framework with the bulk of work initially in defining and calculating parameterisation unique to the a specific pattern. To build new zero waste pattern designs and garment design, a modular approach of scalable pattern pieces would be more intuitive akin to that of GarmentCode, but this is outscope of parameterising existing patterns and rather is for developing novel designs.
-
-\subsection{Pipeline Automation}
-The manual work required to achieve the rendered garment draped on an avatar is a hindrance to the pipeline's automation. Developing a method to assign sewing lines before file import into CLO 3D would greatly speed up this process and forego need of the user to be skilled in CLO 3D. Being able to quickly show the user a visual of the final garment within minutes of entering their inputs would be invaluable in developing this framework into an accessible product. This could involve building a render environment within Tail0r, but a tradeoff has to be made on the computational intentions of Tail0r and the limitations when using third party 3D tools.
-
-\subsection{UI}
-Finally, creating a simple UI where the user can type in their measurements and preferences would go a long way in making this technology more accessible and usable. Though the GitHub repo of this technology is available online, end user would have to know how to run and enter inputs into the command line correctly to get their bespoke pattern. Developing a UI would strength the Tail0r as a ready-to-use tool. The user can get their pattern and instructions displayed on the webpage, and with more development, view the 3D render before making the choice to proceed and cut fabric from the bolt.
-
-\section{Outcome Impact and Potential}
+parameter tuning, neck, shoulder etc
+building in fabric properties
+automation of pipeline
+other patterns
