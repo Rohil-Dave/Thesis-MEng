@@ -187,7 +187,7 @@ The DXF file format is a standard of digital garment patterns. This format can b
 \begin{figure} [H] % opens the figure environment. the '[H]' forces the image to be Here
     \centering % puts the image in the horizontal centre of the page
     \includegraphics[width = \textwidth]{Images/example dxfs.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
-    \caption{Examples of DXF pattern outputs in ezdxf viewer}
+    \caption{Examples of DXF pattern outputs}
 \end{figure}
 
 
@@ -198,8 +198,6 @@ CLO 3D has some added requirements. Each pattern piece created via DXF needs to 
     \includegraphics[width = 0.4\textwidth]{Images/dxf viewer.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
     \caption{Layer toggle feature in ezdxf viewer}
 \end{figure}
-
-Sometimes, these segments had to be manipulated in Adobe Illustrator to get the shapes to close and be usable in CLO 3D. Defining layers easily allowed for paths to be joined with out affecting other pieces. A future enhancement would be to get this to work directly out of Python and ezdxf settings. This process does generate a DXF file suitable for CLO 3D, and once the appropriate sewing properties are defined and pieces are positioned, the garment gets draped onto an avatar. This can then be rendered and shown to the end user as a base visual indication of fit and style.
 
 \subsubsection{PDF Pattern File}
 Along with the DXF file, a PDF file is also provided including annotated dimensions of the pattern. It provides all the information needed for measuring, drawing the pattern pieces, and cutting out pieces from the fabric. Labels and dimensions are also presented. This information along with the sewing instructions is what is needed for the user to make the garment themselves. The PDF pattern is made by plotting with matplotlib. An example PDF output is shown below.
