@@ -31,43 +31,20 @@ Key goals of the project include:
 \subsection{tail0r Pipeline}
 
 \subsection{Pattern Selection}
-Just like in traditional garment manufacture the project separates garment design from parameterisation. This project will parameterise an existing zero waste pattern design, Birgitta Helmersson’s shirt.
-The chosen garment for this study is a short-sleeved collared shirt block, as detailed in Birgitta Helmersson’s book “Zero Waste Patterns: 20 Projects to Sew Your Own Wardrobe.” This garment is inherently loose-fitting and oversized, presenting a unique challenge in balancing zero-waste principles with a more tailored fit.
-
-\begin{figure} [H] % opens the figure environment. the '[H]' forces the image to be Here
-    \centering % puts the image in the horizontal centre of the page
-    \includegraphics[width = \textwidth]{Images/finishedgarmentsilhoutte.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
-    \caption{Workshop measurement taking diagram}
+The chosen garment for this study is Helmersson's short-sleeved collared shirt with a back pleat and front button closure (Figure \ref{fig:bh shirt sketch}) from her book \textit{Zero Waste Patterns: 20 Projects to Sew Your Own Wardrobe}. It's a ``one-size garment where the total body circumference [of the garment] is determined by the width of fabric'' used, forcing zero-waste. As a result, it's inherently loose-fitting and oversized, presenting a unique challenge in balancing zero-waste principles with a more tailored fit. She designates it as skill level 3 out of 5, being suitable for confident beginners. The garment was chosen for its relative simplicity in construction, symmetry of its pattern (Figure \ref{fig:bh shirt pattern}), and the challenge it presents in parameterising for a better fit.
+\begin{figure} [H]
+    \centering
+    \includegraphics[width = \textwidth]{Images/finishedgarmentsilhoutte.png}
+    \caption{Helmersson's Shirt sketch}
     \copyright {Birgitta Helmersson} % this prints the caption below the figure
+    \label{fig:bh shirt sketch}
 \end{figure}
-She designates this block to be a skill level 3 out of 5, being suitable for confident beginners. To make these garments no large paper patterns are required, simply the designs are cut out and drawn directly onto the fabric. For the pieces Helmersson keeps constant, she provides small printable templates.
-
-She defines her shirt block as ``one size, size determined by fabric width." Below is the sizing chart she provides. It forces the compromise of loose fit for zero waste. 
-She claims the size chart is designed with around 25 cm of ease. This value is inclusive of wearing plus design ease. Wearing ease is the ease required to make natural movements in the garment and design ease is the ease added to maintain the aesthetic shape and style of the garment. Her 25 cm ease is a general ease value that she has applied to the garment as a whole, not individual areas. 
-\begin{figure} [H] % opens the figure environment. the '[H]' forces the image to be Here
-    \centering % puts the image in the horizontal centre of the page
-    \includegraphics[width = 0.5\textwidth]{Images/BH size chart.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
-    \caption{Helmersson's Shirt pattern sizing chart}
-    \copyright {Birgitta Helmersson} % this prints the caption below the figure
-\end{figure}
-Her chart only considers the max chest/bust and max hip measurements to base sizing on. The fabric width is 31 cm greater than the largest max circumference given (here it is the hip). Given that the ease is 25 cm, the remaining 6 cm is the seam allowance around the width of the pattern. This 6 cm value is used in the project when scaling the pattern.
-
-The chart only considers widths in a small 20 cm band (fabric widths from 135-155 cm, max hip from 104-124 cm). Our aim is to use body measurements to figure out ideal pattern width size and make suggestions based on bolt width available. Also, notions (bindings, buttons, iron on interfacings, etc.) are not considered. These are components of the final garment not sourced from the original rectangle cut from the fabric bolt. These are not part of the waste analysis.
-
-Helmersson employs the constant template sizes for the facing (B) and banded template size for the sleevehead curve (E). She also keeps the collar pieces (C) constant for all users.
-
-%%%%%%%%%%%%%%%%%%%%%%%%
-% PATTERN PARAMETERISATION
-%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Pattern Parameterisation}
-Now that the original garment type is understood, we can dissect the pattern into individual segments for parameterisation.
-\begin{figure} [H] % opens the figure environment. the '[H]' forces the image to be Here
-    \centering % puts the image in the horizontal centre of the page
-    \includegraphics[width = 0.75\textwidth]{Images/originalpattern_whole.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
+\begin{figure} [H]
+    \centering
+    \includegraphics[width = 0.75\textwidth]{Images/originalpattern_whole.png} 
     \caption{Shirt block pattern}
+    \label{fig:bh shirt pattern}
 \end{figure}
-
 \begin{itemize}
     \item \textbf{A} Front/back body piece
     \item \textbf{B} Back neck facing template
@@ -75,10 +52,25 @@ Now that the original garment type is understood, we can dissect the pattern int
     \item \textbf{D} Sleeve pieces
     \item \textbf{E} Sleevehead curve template
 \end{itemize}
-\newpage
-\begin{figure} [H] % opens the figure environment. the '[H]' forces the image to be Here
-    \centering % puts the image in the horizontal centre of the page
-    \includegraphics[width = \textwidth]{Images/originalpattern_pieces.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
+Helmersson's method does not require large paper patterns; instead, designs are drawn directly onto the fabric and cut. For constant pieces, she provides small printable templates, maintaining fixed sizes for B, C, and E. Her sizing chart (Figure \ref{fig:bh size chart}) includes about 25 of ease, combining both wering and design ease. This ease is applied generally, not to individual areas. The chart only considers fabric widths within a 20 cm range and bases sizing only on chest/bust and hip measurements, with fabric with being 31 cm greater than the largest max circumference. This includes 25 cm of ease and 6 cm seam allowance, values used for parameterisation.
+\begin{figure} [H]
+    \centering
+    \includegraphics[width = 0.5\textwidth]{Images/BH size chart.png} 
+    \caption{Helmersson's Shirt sizing chart}
+    \copyright {Birgitta Helmersson}
+    \label{fig:bh size chart}
+\end{figure}
+Notions (bindings, buttons, iron on interfacings, etc.) are not considered. These are components of the final garment not sourced from the original rectangle cut from the fabric bolt, therefore, are not part of the waste analysis.
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% PATTERN PARAMETERISATION
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Pattern Parameterisation}
+Now that the original garment type is understood, we can dissect the pattern into individual segments for parameterisation.
+\begin{figure} [H] 
+    \centering 
+    \includegraphics[width = \textwidth]{Images/originalpattern_pieces.png} 
     \caption{Shirt block pattern pieces}
 \end{figure}
 There are a total of nine (1x body, 2x neck facing, 4x collar, 2x sleeve) pieces that make up the block. Note that D and E combine to form the sleeve piece. There are no side seams on the shirt as there is just a single body piece, not a separate front and back.
@@ -214,10 +206,11 @@ Sometimes, these segments had to be manipulated in Adobe Illustrator to get the 
 
 \subsubsection{PDF Pattern File}
 Along with the DXF file, a PDF file is also provided including annotated dimensions of the pattern. It provides all the information needed for measuring, drawing the pattern pieces, and cutting out pieces from the fabric. Labels and dimensions are also presented. This information along with the sewing instructions is what is needed for the user to make the garment themselves. The PDF pattern is made by plotting with matplotlib. An example PDF output is shown below.
-\begin{figure} [H] % opens the figure environment. the '[H]' forces the image to be Here
-    \centering % puts the image in the horizontal centre of the page
-    \includegraphics[width = \textwidth]{Images/example pdf output.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
+\begin{figure} [H]
+    \centering
+    \includegraphics[width = \textwidth]{Images/example pdf output.png}
     \caption{Example PDF pattern output with annotated dimensions}
+    \label{fig:pdf output}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
@@ -240,11 +233,62 @@ The 3 options are:
 
 In all these calculations of waste metrics the assumption is that the user cuts fabric from the bolt roll they are cutting all the way through the fabric width, leaving a clean edge when done cutting from the bolt. The following diagram outlines this.
 
+\begin{figure} [H]
+    \centering
+    \includegraphics[width = \textwidth]{Images/bolt cutting.png}
+    \caption{Cut from bolt assumption}
+    \label{fig:cut from bolt}
+\end{figure}
+
 The efficiency computation are as follows:
 
 cut loss width = ideal bolt width - pattern width \newline
 cut loss area = cut loss width * pattern height \newline
 efficiency = 100 * (1 - (cut loss area/ (pattern width * pattern height))
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% MITIGATION
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Pattern Mitigation}
+The default assumption is that the pattern width will fall along the bolt width (Figure \ref{fig:pw along bolt})
+\begin{figure} [H]
+    \centering 
+    \includegraphics[width = 0.6\textwidth, angle=90]{Images/pw along bolt.png}
+    \caption{Regular layout}
+    \label{fig:pw along bolt}
+\end{figure}
+
+If the user prefers a fabric with a bolt width less than pattern width or if the ideal bolt width is unavailable, some mitigation is required. This will lead to added cut loss and potentially new seams. Complex, sophisticated fitting algoritms are beyong this project's scope. Instead, simple strategies to mitigate the cut loss are provided:
+
+\subsubsection{Rotation}
+If the pattern height is smaller and closer in dimension to the bolt width, it might be possible to rotate the pattern 90º.
+The waste is the difference between the bolt width and the pattern height \newline
+Waste = (bolt width - pattern height) * pattern width
+\begin{figure} [H]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{Images/ph along bolt.png}
+    \caption{Rotation layout}
+    \label{fig:ph along bolt}
+\end{figure}
+
+\subsubsection{Symmetry}
+Break the pattern into two rectangles using the pattern symmetry along the centre back line as the break. This will result in a sewn seam along the centre back line to connect the now two bodice pieces together. A 2 cm seam allowance will now need to be accounted for. This method is appropriate when bolt width is less than the pattern height.
+\begin{figure} [H]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{Images/symmetry split.png}
+    \caption{Symmetry layout}
+    \label{fig:symmetry split}
+\end{figure}
+
+\subsubsection{Breakout}
+Break the pattern into four rectangles; a split between the bodice section (inclusive neck facings) and the combined sleeve and collar piece sections along and a split down the centre back line. This is for the edge case where the previous 3 strategies do not work or lead to excessive waste.
+\begin{figure} [H]
+    \centering
+    \includegraphics[width = 0.6\textwidth, angle=90]{Images/break into 4.png}
+    \caption{Breakout layout}
+    \label{fig:breakout}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 % EMBELLISHMENTS
@@ -262,55 +306,8 @@ This pocket embellishment is an example. The definition of the pocket is customi
 For analysis, we just need the dimensions of the embellishment. These are then checked against the cut loss dimension to see if recovery is possible and if so, then compute the percentage amount of the recovery. This analysis can be generalized to any embellishment at all. The only thing that needs to change is the instruction to the sewer on how to tailor this extra piece, of course alongside the new embellishment piece size to check for. An update to the DXF output allows this to be previewed in CLO 3D.
 
 %%%%%%%%%%%%%%%%%%%%%%%%
-% MITIGATION
-%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Pattern Mitigation}
-The pattern file creation assumes that the pattern width will fall along the bolt width as seen below.
-\begin{figure} [H] % opens the figure environment. the '[H]' forces the image to be Here
-    \centering % puts the image in the horizontal centre of the page
-    \includegraphics[width = 0.6\textwidth, angle=90]{Images/pw along bolt.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
-    \caption{Regular layout diagram}
-\end{figure}
-Given the person’s measurements and the bolt width, it is possible that the pattern may not fit inside the bolt as intended. Here are four mitigation strategies for these cases. Note these are only applicable when the ‘ideal’ bolt width is unavailable and some cut loss will definitely occur. Complex, sophisticated fitting algorithms are outside the scope of this study.
-\subsubsection{Rotation}
-If the pattern height is smaller and closer in dimension to the bolt width, it might be possible to rotate the pattern 90º.
-The waste is the difference between the bolt width and the pattern height \newline
-Waste = (bolt width - pattern height) * pattern width
-\begin{figure} [H] % opens the figure environment. the '[H]' forces the image to be Here
-    \centering % puts the image in the horizontal centre of the page
-    \includegraphics[width = 0.8\textwidth]{Images/ph along bolt.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
-    \caption{Rotation diagram}
-\end{figure}
-
-\subsubsection{Symmetry}
-Break the pattern into two rectangles using the pattern symmetry along the centre back line as the break. This will result in a sewn seam along the centre back line to connect the now two bodice pieces together. A 2 cm seam allowance will now need to be accounted for. This method is appropriate when bolt width is less than the pattern height.
-\begin{figure} [H] % opens the figure environment. the '[H]' forces the image to be Here
-    \centering % puts the image in the horizontal centre of the page
-    \includegraphics[width = 0.8\textwidth]{Images/symmetry split.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
-    \caption{Symmetry diagram}
-\end{figure}
-\subsubsection{Insert Panel}
-Depending on the pattern dimensions it might be less wasteful to insert a panel to the centre of the pattern to get to desired pattern width. The length the cut is made on determines the added waste area.
-The caveat is that the centre panel should not be less than 25 cm as it will affect the cutting and sewing of the collar pieces.
-\begin{figure} [H] % opens the figure environment. the '[H]' forces the image to be Here
-    \centering % puts the image in the horizontal centre of the page
-    \includegraphics[width = 0.8\textwidth, angle=90]{Images/added panel.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
-    \caption{Insert panel diagram}
-\end{figure}
-\subsubsection{Breakout}
-Break the pattern into four rectangles; a split between the bodice section (inclusive neck facings) and the combined sleeve and collar piece sections along and a split down the centre back line. This is for the edge case where the previous 3 strategies do not work or lead to excessive waste.
-\begin{figure} [H] % opens the figure environment. the '[H]' forces the image to be Here
-    \centering % puts the image in the horizontal centre of the page
-    \includegraphics[width = 0.6\textwidth, angle=90]{Images/break into 4.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
-    \caption{Breakout diagram}
-\end{figure}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%
 % WORKSHOP STUDY
 %%%%%%%%%%%%%%%%%%%%%%%%
-
 \section{Workshop Study}
 
 \subsection{Rationale}
@@ -350,32 +347,29 @@ We had a total of eight participants, with six of them getting all the way throu
 The first step was to take body measurements. This was needed not only for the pattern creation but also for comparing the results of the fit and ease. This diagram and following instructions for measurement taking were provided so measurements were taken consistently.
 \begin{figure} [H] % opens the figure environment. the '[H]' forces the image to be Here
     \centering % puts the image in the horizontal centre of the page
-    \includegraphics[width = \textwidth]{Images/Measurement Taking Guide.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
+    \includegraphics[width = \textwidth]{Images/workshopmeasure.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
     \caption{Workshop measurement taking instructions}
 \end{figure}
-\begin{enumerate}
-    \item \textbf{Desired Shirt Length:} Measure from the most prominent bone at base of neck to where you want the shirt to end backside.
-    \item \textbf{Chest/Bust Circumference:} Measure around the fullest part of the chest/bust. Do not draw the tape too tightly.
-    \item \textbf{Waist Circumference:} Measure your waist at the wider circumference of your natural waist, usually just below the belly button.
-    \item \textbf{Hip Circumference:} Measure at the widest part of your lower hip.
-    \item \textbf{Neck Circumference:} Measure around the base of the neck
-    \item \textbf{Arm Circumference:} Measure around the widest section of the upper arm located above the elbow.
-    \item \textbf{Armhole Depth:} Measure from the top outside edge of the shoulder down to the armpit.
-    \item \textbf{Shoulder Width:} Measure from shoulder to shoulder, end to end.
-    \item \textbf{Desired Sleeve Length:} With arm straight, measure from the shoulder to where you want the sleeve to end (max 25 cm).
-\end{enumerate}
 
-A limitation of this workshop was that there was only one bolt of calico fabric (150cm) available. This means that the participants could not all get their ‘ideal’ bolt widths for true zero waste design. This will show up in lower efficiency scores and increased cut loss.
-\newline
+% \begin{enumerate}
+%     \item \textbf{Desired Shirt Length:} Measure from the most prominent bone at base of neck to where you want the shirt to end backside.
+%     \item \textbf{Chest/Bust Circumference:} Measure around the fullest part of the chest/bust. Do not draw the tape too tightly.
+%     \item \textbf{Waist Circumference:} Measure your waist at the wider circumference of your natural waist, usually just below the belly button.
+%     \item \textbf{Hip Circumference:} Measure at the widest part of your lower hip.
+%     \item \textbf{Neck Circumference:} Measure around the base of the neck
+%     \item \textbf{Arm Circumference:} Measure around the widest section of the upper arm located above the elbow.
+%     \item \textbf{Armhole Depth:} Measure from the top outside edge of the shoulder down to the armpit.
+%     \item \textbf{Shoulder Width:} Measure from shoulder to shoulder, end to end.
+%     \item \textbf{Desired Sleeve Length:} With arm straight, measure from the shoulder to where you want the sleeve to end (max 25 cm).
+% \end{enumerate}
 For the workshop the focus was on making toiles. A toile is "a prototype or fitting version of a garment that's made up in an inexpensive fabric so that the design can be tested and perfected". This was done to be efficient with time and get the most meaningful important results. Therefore, attention was paid to stitching the essential components like pleats, shoulders, and sleeves. The button placket and collar were less important and were just pinned on for fit evaluation if desired.
-\newline
+
 All participants were measured. Their individualised parameterized patterns were given to them along with an appropriately cut piece of fabric. They were then guided through the 3 sessions to make the garment. Once completed, measurements of the finished garment as well as the participants perception of fit and comfort were recorded. These will be used in evaluating the suitability of the parameterisation method.
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 % 100 SCANS STUDY
 %%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{100 Body Scans Study}
+\section{Body Scans Study}
 
 \subsection{Rationale}
 The University of Manchester’s Apparel Design Engineering (ADE) team has made public 100 scans processed using a Size Stream body scanner. The scans are a sample of 20-30 year-old females from the UK, with half identified as White British and half as Chinese. This is known as the referred to as Mendeley dataset. From the dataset’s release notes, “3D Body Scanning is a technology that allows the capture and analysis of the human body using non-contact methods, current uses have allowed large datasets to be captured and comparisons made with population groups.”
@@ -424,7 +418,8 @@ Shirt Length = Waist Height + Half Back Center TM - Crotch Height
 This will be treated as the desired shirt length and plugged in to the pattern height formula as stated before in section 3.2. 
 
 This data is run through the program to calculate the fabric use efficiencies and verify suitability of the pattern file construction.
-\section{Case Study: My Measurements}
+
+\section{Personal Case Study}
 I visited the ADE group in Manchester to get own scan data using the Size Stream scanner. The parameterisation for the pattern height and width differe slightly because of the slightly different data points provided. 
 My data did not provide and Axilla Chest circumference so this was omitted when checking for max bodice circumference used in determining pattern width.
 
