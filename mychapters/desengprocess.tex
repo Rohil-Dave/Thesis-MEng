@@ -29,14 +29,14 @@ Key goals of the project include:
 
 \subsection{Pattern Selection}
 The chosen garment for this study is Helmersson's short-sleeved collared shirt with a back pleat and front button closure (Figure \ref{fig:bh shirt sketch}) from her book \textit{Zero Waste Patterns: 20 Projects to Sew Your Own Wardrobe}. It's a ``one-size garment where the total body circumference [of the garment] is determined by the width of fabric'' used, forcing zero-waste. As a result, it's inherently loose-fitting and oversized, presenting a unique challenge in balancing zero-waste principles with a more tailored fit. She designates it as skill level 3 out of 5, being suitable for confident beginners. The garment was chosen for its relative simplicity in construction, symmetry of its pattern (Figure \ref{fig:bh shirt pattern}), and the challenge it presents in parameterising for a better fit.
-\begin{figure} [H]
+\begin{figure} [htb]
     \centering
     \includegraphics[width = \textwidth]{Images/finishedgarmentsilhoutte.png}
     \caption{Helmersson's Shirt sketch}
     \copyright {Birgitta Helmersson} % this prints the caption below the figure
     \label{fig:bh shirt sketch}
 \end{figure}
-\begin{figure} [H]
+\begin{figure} [htb]
     \centering
     \includegraphics[width = 0.75\textwidth]{Images/originalpattern_whole.png} 
     \caption{Shirt block pattern}
@@ -72,7 +72,7 @@ Now that the original garment type is understood, we can dissect the pattern int
 \end{figure}
 There are a total of nine (1x body, 2x neck facing, 4x collar, 2x sleeve) pieces that make up the block. Note that D and E combine to form the sleeve piece. There are no side seams on the shirt as there is just a single body piece, not a separate front and back.
 
-\begin{table} [H] % this tells the compiler that a table environment is starting
+\begin{table} [htb] % this tells the compiler that a table environment is starting
     \centering % this puts it in the horizontal centre of the page
     %\rowcolors{1}{}{Gray} % this sets up the alternating grey/white background
     \begin{tabular}{p{2cm}|p{5cm}} % this sets up the tabular environment ant states the width of the columns, you could use an equation here using the \textwidth, but i have no experience with this. 
@@ -94,7 +94,7 @@ There are a total of nine (1x body, 2x neck facing, 4x collar, 2x sleeve) pieces
         \end{tabular}
     \caption{Pattern Parameters Table}
 \end{table}
-\begin{figure} [H] % opens the figure environment. the '[H]' forces the image to be Here
+\begin{figure} [htb] % opens the figure environment. the '[H]' forces the image to be Here
     \centering % puts the image in the horizontal centre of the page
     \includegraphics[width = \textwidth]{Images/pattern params.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
     \caption{Pattern Parameters Diagram}
@@ -315,6 +315,8 @@ The workshop study dataset will be described using the max bodice circumference 
 
 The aim of this study is to test the parameterisation process in a real world setting and evaluate fit and suitability of the parameterisation method through qualitative methods. The workshop will be used to evaluate the efficacy of the parameterisation process in creating a better fit for the individual while still keeping its intended style and aesthetic. Focus on fit around the bodice is prioritised.
 
+\subsection{Methods}
+
 A digital poster was created for recruitment (see Appendix) and advertised to the DE Fashion and Textiles Research Group, who self-expressed interest in the topic. Participant numbers were limited due to time, resources, and the availability of only three sewing machines. Ethics approval was obtained, and all participants provided informed consent after receiving participant information sheets.
 
 Pattern cutting and sewing instructions, worksheets, and paper patterns were developed for the study/workshop. The workshop was conducted over three 4-hour sessions:
@@ -341,8 +343,7 @@ Body measurements were taken consistently using a provided diagram and instructi
 \section{Body Scans Study}
 Similar to the workshop study, the body scan dataset will be described using the max bodice circumference and the shirt length of the participants as these measurments are most indicative of the pattern's dimensions and thus resulting waste.
 
-
-The University of Manchester's Apparel Design Engineering (ADE) team has made public 100 scans processed using a Size Stream body scanner. The scans are a sample of 20-30 year-old females from the UK, with half identified as White British and half as Chinese. This is known as the referred to as Mendeley dataset. From the dataset's release notes, “3D Body Scanning is a technology that allows the capture and analysis of the human body using non-contact methods, current uses have allowed large datasets to be captured and comparisons made with population groups.”
+The University of Manchester's Apparel Design Engineering (ADE) team has made public 100 scans processed using a Size Stream body scanner. The scans are a sample of 20-30 year-old females from the UK, with half identified as White British and half as Chinese. This is referred to as the Mendeley dataset. From the dataset's release notes, “3D Body Scanning is a technology that allows the capture and analysis of the human body using non-contact methods, current uses have allowed large datasets to be captured and comparisons made with population groups.”
 
 This study needs to validate tail0r's processes across a larger dataset than was obtained in the workshop. The purpose of this study is focused around the fabric use efficiency metrics and efficacy of pattern mitigation strategies rather than fit analysis as these patterns will not be produced into physical garments.
 
@@ -365,11 +366,8 @@ w = width of the circ
 
 h = height of the circ
 
-\textbf{(ADD DIAGRAMS FOR ALL OF THESE DERIVATIVES TO SHOW VISUAL EXAMPLES)}
 
 Tape measure derivatives are useful for our patterns as these bridge concavities of the model as opposed to contours like the "c" coded measurement while closely follows the body surface. To determine the max bodice circumference, we analyse more than just the hip, waist, and chest/bust measurements. In fact, we take into considerations seven relevant bodice circumference TM measurements that reinforce inclusivity of body shapes: Abdomen Circ, Axilla Chest Circ, Chest/Bust Circ, Hip Circ, Seat Circ, Stomach Max Circ, Waist Circ. These are shown in the figures below. The parameterisation still takes the largest of these circumferences and adds the general ease and sew allowance to compute pattern 
-
-\textbf{(ADD DIAGRAMS FOR ALL THESE CIRCS FROM THE SIZE STREAM OR RECREATE THEM IF NOT AVAILABLE)}
 
 The height derivatives are measured from the floor straight up to specified point or arc in the Y plane. The heights of the circumferences are useful because they allow us to derive the relation to where various circumferences are to each other. For the ADE group focusing on more form fitting, non-zero waste clothing, this is useful because this will allow them to control ease around different parts of the body. They can produce a visual representation/estimation of where the body will take up space within the garment. An instance of this is shown in the below example of a bespoke sweatshirt pattern produced by the ADE group. 
 
