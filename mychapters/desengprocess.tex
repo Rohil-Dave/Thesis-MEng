@@ -4,20 +4,26 @@ Summarize the breakdown of the des eng process here ??.
 \section{Research Aims and Goals}
 
 \subsection{Context and Rationale}
-This project addresses fabric waste in garment manufacturing by aiming to make zero-waste pattern making more accessible and inclusive. It seeks to resolve the lack of parameterisation methods for zero-waste patterns and the inability of current patterns to provide a good fit for diverse body types. Custom sizing for individuals enhances the garment's value to the wearer, but introducing more fit can lead to increased cut loss. Therefore, the project aims to present methods to recoup cut loss through creative reuse for increased garment utility. Additionally, the project aims to leverage virtual draping tools to provide visual representations before users commit to production.
+This project addresses fabric waste in garment manufacturing by aiming to make zero-waste pattern making more accessible and inclusive. It seeks to resolve the lack of parameterisation methods for zero-waste patterns and the inability of current patterns to provide a good fit for diverse body types. Custom sizing for individuals enhances the garment's value to the wearer, but introducing more fit can lead to increased cut loss. Therefore, the project aims to present methods to recoup cut loss through creative reuse for increased garment utility. The project leverages virtual draping tools to provide visual representations before users commit to production.
 
 \subsection{Scope}
-This project targets the smaller-scale operations that can more readily adopt innovative and sustainable practices. The aim is to create a framework enabling bespoke zero-waste pattern creation for both physical production and virtual modelling. Patterns that are true zero-waste and minimum-waste are created. The framework aims to provide analytics on fabric use efficiency to enable informed decisions. The project is prioritises fit around the bodice over arms. Physical testing in a workshop study is used for evaluating the parameterisation method on fit. Theoretical analysis on a publicly available dataset is used for evaluating the parameterisation on fabric efficiency and cut loss metrics. Integration of fabric properties and analysis production costs are not considered. The project is not concerned with the mass production of garments but rather the creation of a single garment for an individual. This project selects one existing zero-waste pattern to parameterise and is not concerned with developing a new pattern design. The author is not trained in fashion practice and instead applies design engineering methods to introduce novel innovation. Python is used for parameterisation, pattern file generation, and efficiency analysis. CLO 3D is used for virtual draping.
+This project targets the smaller-scale operations that can more readily adopt innovative and sustainable practices. It is not concerned with the mass production but rather the creation of a single garment for an individual. Integration of fabric properties and cost analysis are not considered. 
+
+The aim is to create a framework enabling bespoke towards zero-waste pattern creation for both virtual modelling and physical production. The framework provides analytics on fabric use efficiency to enable informed decisions.  
+
+This project selected one existing zero-waste pattern to parameterise and is not concerned with developing a new pattern design. The project prioritises fit around the bodice over arms. Physical testing in a workshop study is used for evaluating the parameterisation method on fit. Theoretical analysis on a publicly available dataset is used for evaluating the parameterisation on fabric efficiency and cut loss metrics.
+ 
+The author is not trained in fashion practice but applies design engineering methods to introduce novelty. Python is used for parameterisation, pattern file generation, and efficiency analysis. CLO 3D is used for virtual draping.
 
 \subsection{Goals}
 Key goals of the project include:
 \begin{itemize}
-    \item Parameterise the selected zero-waste pattern: Develop a method that successfully takes in measurements and outputs a pattern that creates the intended garment.
-    \item Optimise fabric utilisation: Compute the ideal fabric bolt width for a given pattern's dimensions.
-    \item Analyse fit, style, and waste trade-offs: Present fabric efficiency and cut loss metrics for different preferences for the garment to allow users to make informed decisions before production.
-    \item Be inclusive: Implement techniques that allow for garment creation for specific fabric sizes and outlier body types.
-    \item Recoup cut loss: Define and implement a strategy that repurposes cut loss to enhance the garment's utility and aesthetic appeal.
-    \item Visualise the garment in 3D: Generate pattern files suitable for import into CLO 3D to provide a visual representation of the garment on an avatar.
+    \item Develop a method that successfully takes in measurements and outputs a parameterised pattern for the garment.
+    \item Calculate the ideal fabric bolt width for a given pattern's dimensions.
+    \item Compute fabric efficiency and cut loss metrics based on user preferences for informed decision-making.
+    \item Provide mitigation techniques to fit the pattern on available fabric bolt widths.
+    \item Define and implement a strategy that repurposes cut loss to enhance the garment's utility and aesthetic appeal.
+    \item Generate pattern files to visualise the garment on an avatar.
 \end{itemize}
 
 \section{Methodology}
@@ -44,7 +50,7 @@ She claims the size chart is designed with around 25 cm of ease. This value is i
     \caption{Helmersson's Shirt pattern sizing chart}
     \copyright {Birgitta Helmersson} % this prints the caption below the figure
 \end{figure}
-Her chart only considers the max chest/bust and max hip measurements to base sizing on. The fabric width is 31 cm greater than the largest max circumference given (here it is the hip). Given that the ease is 25cm, the remaining 6 cm is the seam allowance around the width of the pattern. This 6 cm value is used in the project when scaling the pattern.
+Her chart only considers the max chest/bust and max hip measurements to base sizing on. The fabric width is 31 cm greater than the largest max circumference given (here it is the hip). Given that the ease is 25 cm, the remaining 6 cm is the seam allowance around the width of the pattern. This 6 cm value is used in the project when scaling the pattern.
 
 The chart only considers widths in a small 20 cm band (fabric widths from 135-155 cm, max hip from 104-124 cm). Our aim is to use body measurements to figure out ideal pattern width size and make suggestions based on bolt width available. Also, notions (bindings, buttons, iron on interfacings, etc.) are not considered. These are components of the final garment not sourced from the original rectangle cut from the fabric bolt. These are not part of the waste analysis.
 
