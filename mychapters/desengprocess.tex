@@ -1,8 +1,5 @@
 \chapter{Design Engineering Process} 
-Summarize the breakdown of the des eng process here ??.
-
 \section{Research Aims and Goals}
-
 \subsection{Context and Rationale}
 This project addresses fabric waste in garment manufacturing by aiming to make zero-waste pattern making more accessible and inclusive. It seeks to resolve the lack of parameterisation methods for zero-waste patterns and the inability of current patterns to provide a good fit for diverse body types. Custom sizing for individuals enhances the garment's value to the wearer, but introducing a closer fit can lead to increased cut loss. Therefore, the project aims to parameterise a zero-waste pattern based on measurements and preferences, outline the waste impact, present methods to recoup cut loss through creative reuse for increased garment utility, and leverage 3D tools to provide visual representations before users commit to production.
 
@@ -53,7 +50,7 @@ The chosen garment for this study is Helmersson's short-sleeved collared shirt w
     \item \textbf{E} Sleevehead curve template
 \end{itemize}
 Helmersson's method does not require large paper patterns; instead, designs are drawn directly onto the fabric and cut. For constant pieces, she provides small printable templates, maintaining fixed sizes for B, C, and E. Her sizing chart (Figure \ref{fig:bh size chart}) includes about 25 cm of ease, combining both wearing and design ease. This ease is applied generally, not to individual areas. The chart only considers fabric widths within a 20 cm range and bases sizing only on chest/bust and hip measurements, with fabric with being 31 cm greater than the largest max circumference. This includes 25 cm of ease and 6 cm seam allowance, values used for parameterisation.
-\begin{figure} [H]
+\begin{figure} [htb]
     \centering
     \includegraphics[width = 0.5\textwidth]{Images/BH size chart.png} 
     \caption{Helmersson's Shirt sizing chart}
@@ -68,7 +65,7 @@ Notions (bindings, buttons, iron on interfacings, etc.) are not considered. Thes
 
 \subsection{Pattern Parameterisation}
 Now that the original garment type is understood, we can dissect the pattern into individual segments for parameterisation.
-\begin{figure} [H] 
+\begin{figure} [htb] 
     \centering 
     \includegraphics[width = \textwidth]{Images/originalpattern_pieces.png} 
     \caption{Shirt block pattern pieces}
@@ -318,7 +315,7 @@ For analysis, we just need the dimensions of the embellishment. These are then c
 \section{Workshop Study}
 The workshop study dataset will be described using the max bodice circumference and the shirt length of the participants as this measurment and this preference are most indicative of the pattern's dimensions and thus resulting waste.
 
-The aim of this study is to test the parameterisation process in a real world setting and evaluate fit through mixed qualitative and quantitative methods. The workshop will be used to evaluate the efficacy of the parameterisation process in creating a better fit for the individual while still keeping its intended style and aesthetic. Focus on fit around the bodice is prioritised.
+The aim of this study is to test the parameterisation process in a real world setting and evaluate fit and suitability of the parameterisation method through qualitative methods. The workshop will be used to evaluate the efficacy of the parameterisation process in creating a better fit for the individual while still keeping its intended style and aesthetic. Focus on fit around the bodice is prioritised.
 
 A digital poster was created for recruitment (see Appendix) and advertised to the DE Fashion and Textiles Research Group, who self-expressed interest in the topic. Participant numbers were limited due to time, resources, and the availability of only three sewing machines. Ethics approval was obtained, and all participants provided informed consent after receiving participant information sheets.
 
@@ -327,20 +324,18 @@ Pattern cutting and sewing instructions, worksheets, and paper patterns were dev
 \begin{enumerate}
     \item Initiation: Explained the study schedule and purpose, conducted a paper pattern activity, taught sewing basics, took body measurements, generated bespoke patterns, and cut fabric pieces.
     \item Sewing: Dedicated time for sewing the garment.
-    \item Evaluation: Finished the garment and collected both quantitative finished garment measurements and qualitative perceptions of fit and comfort.
+    \item Evaluation: Finished the garment and collected qualitative perceptions of fit and comfort.
 \end{enumerate}
+Body measurements were taken consistently using a provided diagram and instructions (Figure \ref{fig:workshopmeasure}), essential for pattern creation and fit comparison. The workshop focused on making toiles from calico, prototypes made for fit testing. Essential components that allow for wearing like pleats, shoulders, and sleeves were prioritised, while the button placket and collar were pinned for fit evaluation if desired. Once the toile was made, participants wore it for
 
-Body measurements were taken consistently using a provided diagram and instructions, essential for pattern creation and fit comparison. The workshop focused on making toiles, prototypes made from inexpensive fabric, to efficiently test and perfect designs. Essential components like pleats, shoulders, and sleeves were stitched, while the button placket and collar were pinned for fit evaluation if desired.
-\begin{figure} [H]
+
+\begin{figure} [htb]
     \centering
     \includegraphics[width = \textwidth]{Images/workshopmeasure.png}
     \caption{Workshop measurement taking instructions}
     \label{fig:workshopmeasure}
 \end{figure}
 
-Body measurements were taken consistently using a provided diagram and instructions, essential for pattern creation and fit comparison. The workshop focused on making toiles from calico, prototypes made for fit testing, to efficiently test. Essential components like pleats, shoulders, and sleeves were prioritised, while the button placket and collar were pinned for fit evaluation if desired.
-
-All participants were measured. Their individualised parameterized patterns were given to them along with an appropriately cut piece of fabric. They were then guided through the 3 sessions to make the garment. Once completed, measurements of the finished garment as well as the participants perception of fit and comfort were recorded. These will be used in evaluating the suitability of the parameterisation method.
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 % BODY SCANS STUDY
@@ -348,8 +343,8 @@ All participants were measured. Their individualised parameterized patterns were
 \section{Body Scans Study}
 Similar to the workshop study, the body scan dataset will be described using the max bodice circumference and the shirt length of the participants as these measurments are most indicative of the pattern's dimensions and thus resulting waste.
 
-\subsection{Rationale}
-The University of Manchester’s Apparel Design Engineering (ADE) team has made public 100 scans processed using a Size Stream body scanner. The scans are a sample of 20-30 year-old females from the UK, with half identified as White British and half as Chinese. This is known as the referred to as Mendeley dataset. From the dataset’s release notes, “3D Body Scanning is a technology that allows the capture and analysis of the human body using non-contact methods, current uses have allowed large datasets to be captured and comparisons made with population groups.”
+
+The University of Manchester's Apparel Design Engineering (ADE) team has made public 100 scans processed using a Size Stream body scanner. The scans are a sample of 20-30 year-old females from the UK, with half identified as White British and half as Chinese. This is known as the referred to as Mendeley dataset. From the dataset's release notes, “3D Body Scanning is a technology that allows the capture and analysis of the human body using non-contact methods, current uses have allowed large datasets to be captured and comparisons made with population groups.”
 
 This study needs to validate tail0r's processes across a larger dataset than was obtained in the workshop. The purpose of this study is focused around the fabric use efficiency metrics and efficacy of pattern mitigation strategies rather than fit analysis as these patterns will not be produced into physical garments.
 
