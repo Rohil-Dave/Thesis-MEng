@@ -250,7 +250,7 @@ efficiency = 100 * (1 - (cut loss area/ (pattern width * pattern height))
 % MITIGATION
 %%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Pattern Mitigation}
+\subsection{Pattern Segmentation and Reconstruction}
 The default assumption is that the pattern width will fall along the bolt width (Figure \ref{fig:pw along bolt})
 \begin{figure} [H]
     \centering 
@@ -259,7 +259,7 @@ The default assumption is that the pattern width will fall along the bolt width 
     \label{fig:pw along bolt}
 \end{figure}
 
-If the user prefers a fabric with a bolt width less than pattern width or if the ideal bolt width is unavailable, some mitigation is required. This will lead to added cut loss and potentially new seams. Complex, sophisticated fitting algoritms are beyong this project's scope. Instead, simple strategies to mitigate the cut loss are provided:
+If the user prefers a fabric with a bolt width less than pattern width or if the ideal bolt width is unavailable, some mitigation is required. SR technique is employed to realise pattern for larger pattern widths and smaller bolt widths. This will lead to added cut loss and potentially new seams. Complex, sophisticated fitting algoritms are beyong this project's scope. Instead, simple strategies to mitigate the cut loss are provided:
 
 \subsubsection{Rotation}
 If the bolt width is greater than pattern height, rotate the pattern 90º (Figure \ref{fig:ph along bolt}).
@@ -318,26 +318,19 @@ For analysis, we just need the dimensions of the embellishment. These are then c
 \section{Workshop Study}
 The workshop study dataset will be described using the max bodice circumference and the shirt length of the participants as this measurment and this preference are most indicative of the pattern's dimensions and thus resulting waste.
 
-The aim of this study is to test the parameterisation process in a real world setting and evaluate fit through mixed qualitative and quantitative methods. The workshop will be used to evaluate the efficacy of the parameterisation process in creating a better fit for the individual while still keeping its intended style and aesthetic.
+The aim of this study is to test the parameterisation process in a real world setting and evaluate fit through mixed qualitative and quantitative methods. The workshop will be used to evaluate the efficacy of the parameterisation process in creating a better fit for the individual while still keeping its intended style and aesthetic. Focus on fit around the bodice is prioritised.
 
-\subsection{Methods}
+A digital poster was created for recruitment (see Appendix) and advertised to the DE Fashion and Textiles Research Group, who self-expressed interest in the topic. Participant numbers were limited due to time, resources, and the availability of only three sewing machines. Ethics approval was obtained, and all participants provided informed consent after receiving participant information sheets.
 
-\subsubsection{Experimental Procedures}
+Pattern cutting and sewing instructions, worksheets, and paper patterns were developed for the study/workshop. The workshop was conducted over three 4-hour sessions:
 
-A digital poster was made for recruitment, shown in Appendix. The campaign was only advertised to the DE Fashion and Textiles Research Group who have self selcted interest in the topic. Participants were limited because of the time, resources, and expertise needed such as for example we only had 3 sewing machines.
-
-Ethics approval was obtained, participant information sheets were given, and informed consent was obtained from all participants
-
-Also created were pattern cutting and sewing instructions, the worksheet to follow along in the study/workshop, and paper patterns for an activity to understand the pattern.
-
-The workshop took place over 3 sessions:
 \begin{enumerate}
-    \item Initiation: Explaining the schedule and purpose of the study to the participants. Walkthrough of the process with the paper pattern activity, learning sewing basics, taking body measurements, and finally generating the bespoke patterns and working towards drawing and getting all pieces of the pattern cut out from the fabric.
-    \item Sewing: Dedicated time towards sewing the garment from the given pattern.
-    \item Evaluation: Finishing the garment and collecting metrics (both quantitative finished garment measurements and the qualitative perceptions of fit and comfort).
+    \item Initiation: Explained the study schedule and purpose, conducted a paper pattern activity, taught sewing basics, took body measurements, generated bespoke patterns, and cut fabric pieces.
+    \item Sewing: Dedicated time for sewing the garment.
+    \item Evaluation: Finished the garment and collected both quantitative finished garment measurements and qualitative perceptions of fit and comfort.
 \end{enumerate}
 
-The first step was to take body measurements. This was needed not only for the pattern creation but also for comparing the results of the fit and ease. This diagram and following instructions for measurement taking were provided so measurements were taken consistently.
+Body measurements were taken consistently using a provided diagram and instructions, essential for pattern creation and fit comparison. The workshop focused on making toiles, prototypes made from inexpensive fabric, to efficiently test and perfect designs. Essential components like pleats, shoulders, and sleeves were stitched, while the button placket and collar were pinned for fit evaluation if desired.
 \begin{figure} [H]
     \centering
     \includegraphics[width = \textwidth]{Images/workshopmeasure.png}
@@ -345,18 +338,7 @@ The first step was to take body measurements. This was needed not only for the p
     \label{fig:workshopmeasure}
 \end{figure}
 
-% \begin{enumerate}
-%     \item \textbf{Desired Shirt Length:} Measure from the most prominent bone at base of neck to where you want the shirt to end backside.
-%     \item \textbf{Chest/Bust Circumference:} Measure around the fullest part of the chest/bust. Do not draw the tape too tightly.
-%     \item \textbf{Waist Circumference:} Measure your waist at the wider circumference of your natural waist, usually just below the belly button.
-%     \item \textbf{Hip Circumference:} Measure at the widest part of your lower hip.
-%     \item \textbf{Neck Circumference:} Measure around the base of the neck
-%     \item \textbf{Arm Circumference:} Measure around the widest section of the upper arm located above the elbow.
-%     \item \textbf{Armhole Depth:} Measure from the top outside edge of the shoulder down to the armpit.
-%     \item \textbf{Shoulder Width:} Measure from shoulder to shoulder, end to end.
-%     \item \textbf{Desired Sleeve Length:} With arm straight, measure from the shoulder to where you want the sleeve to end (max 25 cm).
-% \end{enumerate}
-For the workshop the focus was on making toiles. A toile is "a prototype or fitting version of a garment that's made up in an inexpensive fabric so that the design can be tested and perfected". This was done to be efficient with time and get the most meaningful important results. Therefore, attention was paid to stitching the essential components like pleats, shoulders, and sleeves. The button placket and collar were less important and were just pinned on for fit evaluation if desired.
+Body measurements were taken consistently using a provided diagram and instructions, essential for pattern creation and fit comparison. The workshop focused on making toiles from calico, prototypes made for fit testing, to efficiently test. Essential components like pleats, shoulders, and sleeves were prioritised, while the button placket and collar were pinned for fit evaluation if desired.
 
 All participants were measured. Their individualised parameterized patterns were given to them along with an appropriately cut piece of fabric. They were then guided through the 3 sessions to make the garment. Once completed, measurements of the finished garment as well as the participants perception of fit and comfort were recorded. These will be used in evaluating the suitability of the parameterisation method.
 
