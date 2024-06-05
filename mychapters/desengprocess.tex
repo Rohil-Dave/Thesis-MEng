@@ -21,7 +21,7 @@ Key goals of the project include:
     \item Develop a method that successfully takes in measurements and outputs a parameterised pattern for the garment.
     \item Calculate the ideal fabric bolt width for a given pattern's dimensions.
     \item Compute fabric efficiency and cut loss metrics based on user preferences for informed decision-making.
-    \item Provide mitigation techniques to fit the pattern on available fabric bolt widths.
+    \item Provide segmentation and reconstructions techniques to fit the pattern on available fabric bolt widths.
     \item Define and implement a strategy that repurposes cut loss to enhance the garment's utility and aesthetic appeal.
     \item Generate pattern files to visualise the garment on an avatar.
 \end{itemize}
@@ -52,7 +52,7 @@ The chosen garment for this study is Helmersson's short-sleeved collared shirt w
     \item \textbf{D} Sleeve pieces
     \item \textbf{E} Sleevehead curve template
 \end{itemize}
-Helmersson's method does not require large paper patterns; instead, designs are drawn directly onto the fabric and cut. For constant pieces, she provides small printable templates, maintaining fixed sizes for B, C, and E. Her sizing chart (Figure \ref{fig:bh size chart}) includes about 25 of ease, combining both wering and design ease. This ease is applied generally, not to individual areas. The chart only considers fabric widths within a 20 cm range and bases sizing only on chest/bust and hip measurements, with fabric with being 31 cm greater than the largest max circumference. This includes 25 cm of ease and 6 cm seam allowance, values used for parameterisation.
+Helmersson's method does not require large paper patterns; instead, designs are drawn directly onto the fabric and cut. For constant pieces, she provides small printable templates, maintaining fixed sizes for B, C, and E. Her sizing chart (Figure \ref{fig:bh size chart}) includes about 25 cm of ease, combining both wearing and design ease. This ease is applied generally, not to individual areas. The chart only considers fabric widths within a 20 cm range and bases sizing only on chest/bust and hip measurements, with fabric with being 31 cm greater than the largest max circumference. This includes 25 cm of ease and 6 cm seam allowance, values used for parameterisation.
 \begin{figure} [H]
     \centering
     \includegraphics[width = 0.5\textwidth]{Images/BH size chart.png} 
