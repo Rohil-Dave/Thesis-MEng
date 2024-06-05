@@ -262,8 +262,9 @@ The default assumption is that the pattern width will fall along the bolt width 
 If the user prefers a fabric with a bolt width less than pattern width or if the ideal bolt width is unavailable, some mitigation is required. This will lead to added cut loss and potentially new seams. Complex, sophisticated fitting algoritms are beyong this project's scope. Instead, simple strategies to mitigate the cut loss are provided:
 
 \subsubsection{Rotation}
-If the pattern height is smaller and closer in dimension to the bolt width, it might be possible to rotate the pattern 90º.
-The waste is the difference between the bolt width and the pattern height \newline
+If the bolt width is greater than pattern height, rotate the pattern 90º (Figure \ref{fig:ph along bolt}).
+The waste then becomes:
+
 Waste = (bolt width - pattern height) * pattern width
 \begin{figure} [H]
     \centering
@@ -273,7 +274,13 @@ Waste = (bolt width - pattern height) * pattern width
 \end{figure}
 
 \subsubsection{Symmetry}
-Break the pattern into two rectangles using the pattern symmetry along the centre back line as the break. This will result in a sewn seam along the centre back line to connect the now two bodice pieces together. A 2 cm seam allowance will now need to be accounted for. This method is appropriate when bolt width is less than the pattern height.
+If the bolt width is also less than pattern height, break the pattern into two symmetrical halves along the centre back line (Figure \ref{fig:symmetry split}). This will result in a sewn seam along the centre back in the finished garment and will need a ~1 cm seam allowance. So now each piece has a width equal to half the pattern width plus the seam allowance.
+
+Resultant piece width = 0.5 * pattern width + seam allowance
+
+The waste then becomes:
+
+Waste = (bolt width - resultant piece width) * 2 * pattern height
 \begin{figure} [H]
     \centering
     \includegraphics[width = 0.8\textwidth]{Images/symmetry split.png}
@@ -282,7 +289,7 @@ Break the pattern into two rectangles using the pattern symmetry along the centr
 \end{figure}
 
 \subsubsection{Breakout}
-Break the pattern into four rectangles; a split between the bodice section (inclusive neck facings) and the combined sleeve and collar piece sections along and a split down the centre back line. This is for the edge case where the previous 3 strategies do not work or lead to excessive waste.
+If even the previous resultant piece width is greater than the bolt width then break the pattern into four rectangles. Make a split between the bodice section (inclusive neck facings) and the combined sleeve and collar piece sections along and a split down the centre back line (Figure \ref{fig:breakout}). This has the potential for the most loss but is the tradeoff to use existing fabric from an avaliable smaller width bolt.
 \begin{figure} [H]
     \centering
     \includegraphics[width = 0.6\textwidth, angle=90]{Images/break into 4.png}
