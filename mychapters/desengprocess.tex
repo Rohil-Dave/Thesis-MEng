@@ -274,7 +274,7 @@ Waste = (bolt width - pattern height) * pattern width
 \end{figure}
 
 \subsubsection{Symmetry}
-If the bolt width is also less than pattern height, break the pattern into two symmetrical halves along the centre back line (Figure \ref{fig:symmetry split}). This will result in a sewn seam along the centre back in the finished garment and will need a ~1 cm seam allowance. So now each piece has a width equal to half the pattern width plus the seam allowance.
+If the bolt width is also less than pattern height, break the pattern into two symmetrical halves along the centre back line (Figure \ref{fig:symmetry split}). This will result in a sewn seam along the centre back in the finished garment and will need a ~1 cm seam allowance. So now each piece has a width equal to half the pattern width plus the seam allowance. The two resultant pieces should be cut from bolt then sewn together along the centre back line first. Then the pattern drawn on and cut.
 
 Resultant piece width = 0.5 * pattern width + seam allowance
 
@@ -289,7 +289,7 @@ Waste = (bolt width - resultant piece width) * 2 * pattern height
 \end{figure}
 
 \subsubsection{Breakout}
-If even the previous resultant piece width is greater than the bolt width then break the pattern into four rectangles. Make a split between the bodice section (inclusive neck facings) and the combined sleeve and collar piece sections along and a split down the centre back line (Figure \ref{fig:breakout}). This has the potential for the most loss but is the tradeoff to use existing fabric from an avaliable smaller width bolt.
+If even the previous resultant piece width is greater than the bolt width then break the pattern into four rectangles. Make a split between the bodice section (inclusive neck facings) and the combined sleeve and collar piece sections along and a split down the centre back line (Figure \ref{fig:breakout}). Pattern height minus the collar piece height (equal to shirt length plus hem allowance) must fit in the bolt for this to work. This has the potential for the most loss but is the tradeoff to use existing fabric from an avaliable smaller width bolt. This will be used in rare occassions where bolt used is significantly smaller than pattern width.
 \begin{figure} [H]
     \centering
     \includegraphics[width = 0.6\textwidth]{Images/IMG_3655.png}
@@ -318,27 +318,17 @@ For analysis, we just need the dimensions of the embellishment. These are then c
 \section{Workshop Study}
 The workshop study dataset will be described using the max bodice circumference and the shirt length of the participants as this measurment and this preference are most indicative of the pattern's dimensions and thus resulting waste.
 
-\subsection{Rationale}
-The purpose of the workshop is to test out the garment pattern parameterisation process in the real world to see how it translates when working with physical material of the fabric. The report is focused on testing if the parameterisation process works well in creating a better fit for the individual while still keeping its intended style and aesthetic. The pattern is supposedly aimed at ‘confident beginners,’ and this author has tested it on their own. However, the efficacy of the pattern’s instruction needed to be verified in an observable setting. 
-
-The research study workshop was part of a larger event that I led and organised for the Dyson Engineering Fashion and Textiles Research Group. The event allowed the research group folk to participate in the workshop and learn new skills like the use of the sewing machine, overlocker, and the tailoring process of going from bolt to finished garment.
+The aim of this study is to test the parameterisation process in a real world setting and evaluate fit through mixed qualitative and quantitative methods. The workshop will be used to evaluate the efficacy of the parameterisation process in creating a better fit for the individual while still keeping its intended style and aesthetic.
 
 \subsection{Methods}
 
 \subsubsection{Experimental Procedures}
-\noindent \textbf{Outreach}
 
-A digital poster was made to advertise the workshop, shown in Appendix. The campaign was only advertised to the Dyson Engineering Fashion and Textiles Research Group who already have self described interest in the topic along with the skills needed to follow tailoring instruction. Participants were limited because of the time, resources, and expertise needed such as for example we only had 3 sewing machines.
+A digital poster was made for recruitment, shown in Appendix. The campaign was only advertised to the DE Fashion and Textiles Research Group who have self selcted interest in the topic. Participants were limited because of the time, resources, and expertise needed such as for example we only had 3 sewing machines.
 
-\noindent \textbf{Ethics Approval} 
+Ethics approval was obtained, participant information sheets were given, and informed consent was obtained from all participants
 
-Since personal data like body measurements were being gathered, participants’ consent as well as training in the ethical handling of the data were a prerequisite. Department ethics clearances were obtained by completing risk assessment training and filling the appropriate ethics forms. There was also an evaluation from the Events Risk Assessment team to obtain their approval for this activity.
-
-All the participants were all given randomised unique alphanumeric identifiers, during the study to maintain anonymity. The participants only knew their data. For the purposes of the study the only requirement was to correctly identify and treat a group of measurements as belonging to one (unnamed) person.
-
-Along with all the ethics and participant information sheet and informed consent forms, also created were pattern cutting and sewing instructions, the worksheet to follow along in the study/workshop, and paper patterns for an activity to understand the pattern.
-
-\noindent \textbf{Process}
+Also created were pattern cutting and sewing instructions, the worksheet to follow along in the study/workshop, and paper patterns for an activity to understand the pattern.
 
 The workshop took place over 3 sessions:
 \begin{enumerate}
@@ -346,15 +336,13 @@ The workshop took place over 3 sessions:
     \item Sewing: Dedicated time towards sewing the garment from the given pattern.
     \item Evaluation: Finishing the garment and collecting metrics (both quantitative finished garment measurements and the qualitative perceptions of fit and comfort).
 \end{enumerate}
-Each of these sessions took about 4 hours each.
-
-
 
 The first step was to take body measurements. This was needed not only for the pattern creation but also for comparing the results of the fit and ease. This diagram and following instructions for measurement taking were provided so measurements were taken consistently.
-\begin{figure} [H] % opens the figure environment. the '[H]' forces the image to be Here
-    \centering % puts the image in the horizontal centre of the page
-    \includegraphics[width = \textwidth]{Images/workshopmeasure.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
+\begin{figure} [H]
+    \centering
+    \includegraphics[width = \textwidth]{Images/workshopmeasure.png}
     \caption{Workshop measurement taking instructions}
+    \label{fig:workshopmeasure}
 \end{figure}
 
 % \begin{enumerate}
@@ -373,7 +361,7 @@ For the workshop the focus was on making toiles. A toile is "a prototype or fitt
 All participants were measured. Their individualised parameterized patterns were given to them along with an appropriately cut piece of fabric. They were then guided through the 3 sessions to make the garment. Once completed, measurements of the finished garment as well as the participants perception of fit and comfort were recorded. These will be used in evaluating the suitability of the parameterisation method.
 
 %%%%%%%%%%%%%%%%%%%%%%%%
-% 100 SCANS STUDY
+% BODY SCANS STUDY
 %%%%%%%%%%%%%%%%%%%%%%%%
 \section{Body Scans Study}
 Similar to the workshop study, the body scan dataset will be described using the max bodice circumference and the shirt length of the participants as these measurments are most indicative of the pattern's dimensions and thus resulting waste.
@@ -381,7 +369,7 @@ Similar to the workshop study, the body scan dataset will be described using the
 \subsection{Rationale}
 The University of Manchester’s Apparel Design Engineering (ADE) team has made public 100 scans processed using a Size Stream body scanner. The scans are a sample of 20-30 year-old females from the UK, with half identified as White British and half as Chinese. This is known as the referred to as Mendeley dataset. From the dataset’s release notes, “3D Body Scanning is a technology that allows the capture and analysis of the human body using non-contact methods, current uses have allowed large datasets to be captured and comparisons made with population groups.”
 
-This study needs to validate its processes across a larger dataset than was obtained in the workshop. The efficacy of modern 3D scanning technology also needs to be tested. The ADE data set satisfies both these criteria. In fact the data capture is more rigorous than found in a commercial tailoring setting. The precision and accuracy of the scanning technology far exceeds the data captured manually. The purpose of this study is focused around the fabric use efficiency metrics and efficacy of pattern mitigation strategies rather than fit analysis as these patterns will not be produced into physical garments.
+This study needs to validate tail0r's processes across a larger dataset than was obtained in the workshop. The purpose of this study is focused around the fabric use efficiency metrics and efficacy of pattern mitigation strategies rather than fit analysis as these patterns will not be produced into physical garments.
 
 \subsection{Methods}
 The pattern parameterisation methods differ slightly because of the different approach to measurement taking that is carried out by the Size Stream scanner than that of manual measurement taking employed for the workshop. The Size Stream works by
