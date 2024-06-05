@@ -15,7 +15,7 @@ We had a total of eight participants, with six of them getting all the way throu
 
 Max bodice circumference and shirt length metrics are used to describe the initial dataset as they are the two most influential measurments on pattern width and pattern height, respectively.
 Workshop study participants have a mean maximum bodice circumferemce of 99.96 cm, median of 98.50 cm and a standard deviation of 8.00 cm. The mean shirt length is 60.36 cm, median of 59.70 cm, and a standard deviation of 6.99 cm.
-\begin{figure}[H]
+\begin{figure}[htb]
     \centering
     \begin{subfigure}[b]{0.45\textwidth}
         \centering
@@ -31,12 +31,19 @@ Workshop study participants have a mean maximum bodice circumferemce of 99.96 cm
     \caption{}
 \end{figure}
 
+\begin{figure} [htb]
+    \centering
+    \includegraphics[width = \textwidth]{Images/fit likert stacked bar.png}
+    \caption{Fit Likert Scales}
+\end{figure}
+\begin{figure} [htb]
+    \centering
+    \includegraphics[width = \textwidth]{Images/comfort likert stacked bar.png}
+    \caption{Comfort Likert Scales}
+\end{figure}
 
-\textbf{Add likert scale plots as follows, "horizontally" per person to identify if a body type specific was not fitted well, and "vertically" per body area to identify if a body area in general was not fitted well}
 
-
-
-\begin{figure}[H]
+\begin{figure}[htb]
     \centering
     \begin{subfigure}[b]{0.45\textwidth}
         \centering
@@ -52,29 +59,29 @@ Workshop study participants have a mean maximum bodice circumferemce of 99.96 cm
     \caption{}
 \end{figure}
 
-\begin{figure} [H]
+\begin{figure} [htb]
     \centering
     \includegraphics[width = \textwidth]{Images/Workshop_CutLossArea_Bar.png}
     \caption{Workshop Cut Loss Area}
 \end{figure}
-\begin{figure} [H]
+\begin{figure} [htb]
     \centering
     \includegraphics[width = \textwidth]{Images/Workshop_CutLossWidth_Bar.png}
     \caption{Workshop Cut Loss Width}
 \end{figure}
-\begin{figure} [H]
+\begin{figure} [htb]
     \centering
     \includegraphics[width = \textwidth]{Images/Workshop_Eff_bar.png}
     \caption{Workshop Fabric Efficiency}
 \end{figure}
-\begin{figure} [H]
+\begin{figure} [htb]
     \centering
     \includegraphics[width = \textwidth]{Images/Workshop_BoltWidths_Scatter.png}
     \caption{Workshop Ideal Bolts}
 \end{figure}
 
 Efficiency, bolt width, cut loss width, and cut loss area for Workshop Study comparing ideal bolt and actual used bolt.
-\begin{figure} [H] % opens the figure environment. the '[H]' forces the image to be Here
+\begin{figure} [htb] % opens the figure environment. the '[H]' forces the image to be Here
     \centering % puts the image in the horizontal centre of the page
     \includegraphics[width = 0.75\textwidth]{Images/Workshop_Plot.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
     \caption{Used and Ideal Efficiency Metrics for Workshop Study}
@@ -96,7 +103,7 @@ Body Scans Study have a mean maximum bodice circumferemce of 99.58 cm, median of
 
 The mean shirt length is 62.40 cm, median of 64.5 cm, and a standard deviation of 6.72 cm. 
 
-\begin{figure}[H]
+\begin{figure}[htb]
     \centering
     \begin{subfigure}[b]{0.45\textwidth}
         \centering
@@ -112,7 +119,7 @@ The mean shirt length is 62.40 cm, median of 64.5 cm, and a standard deviation o
     \caption{Distribution of max bodice circumference for Body Scans Study}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[htb]
     \centering
     \begin{subfigure}[b]{0.45\textwidth}
         \centering
@@ -138,7 +145,7 @@ When using the ideal bolt width, the mean efficiency is 98\%, median efficiency 
 \end{figure}
 
 Cohort analysis
-\begin{table} [H] % this tells the compiler that a table environment is starting
+\begin{table} [htb] % this tells the compiler that a table environment is starting
     \centering % this puts it in the horizontal centre of the page
     %\rowcolors{1}{}{Gray} % this sets up the alternating grey/white background
     \begin{tabular}{p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}} % this sets up the tabular environment ant states the width of the columns, you could use an equation here using the \textwidth, but i have no experience with this. 
