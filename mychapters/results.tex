@@ -140,43 +140,19 @@ The distributions of ideal efficiencies, bolt width, cut loss areas, cut loss wi
     \vfill
     \caption{Body scan ideal case metrics}
 \end{figure}
-
-\newpage
-Distributions of cut loss area, efficiency, and embellishment recouped were computed for a range of bolt widths. Data is present in Table \ref{tab:cohort_analysis} and the plots are shown in Figs (R.16, R.17, R.18) respectively
-
-\begin{table} [H]
-    \centering
-    \begin{tabular}{p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}}
-        \textbf{Bolt Width} & \textbf{Mean Eff} & \textbf{Median Eff} & \textbf{St Dev Eff} & \textbf{Mean Loss Area} & \textbf{Median Loss Area} & \textbf{St Dev Loss Area}\\
-        \hline % this produces a horizontal line, this could be used elsewhere in the table
-        110& 81.7\% & 83.6\% & 6.1\% & 2620.64 & 2318.0 & 889.32\\
-        115& 78.5\% & 80.0\% & 6.0\% & 3233.87 & 2922.75 & 937.46\\
-        120& 76.2\% & 77.1\% & 7.4\% & 3737.44 & 3556.88 & 1207.17\\
-        125& 78.7\% & 75.6\% & 12.1\% & 3526.84 & 4025.0 & 2097.15\\
-        130& 83.7\% & 91.7\% & 13.5\% & 2771.99 & 934.5 & 2542.75\\
-        135& 87.9\% & 92.9\% & 12.3\% & 1997.82 & 843.0 & 2501.29\\
-        140& 88.8\% & 91.1\% & 9.2\% & 1716.44 & 1131.0 & 2025.64\\
-        145& 87.3\% & 88.1\% & 8.1\% & 1865.09 & 1491.63 & 1849.15\\
-        150& 85.2\% & 85.5\% & 7.1\% & 2158.84 & 1890.75 & 1679.22\\
-        155& 83.3\% & 83.1\% & 6.2\% & 2418.42 & 2333.63 & 1388.62\\
-        160& 81.2\% & 80.6\% & 5.4\% & 2752.84 & 2795.13 & 1076.74\\
-        165& 79.1\% & 78.3\% & 5.2\% & 3089.52 & 3250.13 & 782.20\\
-        \end{tabular}
-    \caption{Description of Cohort Analysis on Different Bolts for 100 Scans Study}
-    \label{tab:cohort_analysis}
-\end{table}
+Distributions of cut loss area, efficiency, and embellishment recouped were computed for a range of bolt widths. Data is present in Table \ref{tab:cohort_analysis} and the plotted in Figures (R.16, R.17, R.18) respectively
 
 \begin{table}[H]
     \centering
     \captionsetup{font=small}
     \begin{tabular}{
+        >{\centering\arraybackslash}p{1.2cm} | 
         >{\centering\arraybackslash}p{1.5cm} | 
-        >{\centering\arraybackslash}p{2.5cm} | 
-        >{\centering\arraybackslash}p{2.5cm} | 
-        >{\centering\arraybackslash}p{2.5cm} | 
-        >{\centering\arraybackslash}p{3cm} | 
-        >{\centering\arraybackslash}p{3cm} | 
-        >{\centering\arraybackslash}p{3cm}
+        >{\centering\arraybackslash}p{1.5cm} | 
+        >{\centering\arraybackslash}p{1.5cm} | 
+        >{\centering\arraybackslash}p{2.2cm} | 
+        >{\centering\arraybackslash}p{2.2cm} | 
+        >{\centering\arraybackslash}p{2.2cm}
     }
         \toprule
         \textbf{Bolt Width} & \textbf{Mean Eff} & \textbf{Median Eff} & \textbf{St Dev Eff} & \textbf{Mean Loss Area} & \textbf{Median Loss Area} & \textbf{St Dev Loss Area} \\
@@ -198,6 +174,32 @@ Distributions of cut loss area, efficiency, and embellishment recouped were comp
     \caption{Description of Cohort Analysis on Different Bolts for 100 Scans Study}
     \label{tab:cohort_analysis}
 \end{table}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/Mendeley Multiple bolts Efficiency_Boxplot.png}
+        \caption{efficiency}
+        \label{fig:multibolt_efficiency}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/Mendeley Multiple bolts Efficiency_Boxplot.png}
+        \caption{cut loss area}
+        \label{fig:multibolt_cut_loss_area}
+    \end{subfigure}
+    \vfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/Mendeley Multiple bolts Embellished_Boxplot.png}
+        \caption{embellished}
+        \label{multibolt_embellished}
+    \end{subfigure}
+    \caption{Multiple bolt body scan study cohort analysis}
+    \label{fig:multibolt_analysis}
+\end{figure}
 
 Count of pattern orientation on starting fabric and possibility of embellishment potential for various bolt widths ranging from 110 to 160 cm.
 \begin{figure} [H]
@@ -232,4 +234,27 @@ Using the parameterisation method defined, the author's pattern width and patter
     \end{subfigure}
     \caption{Custom shirt draped on personal scan in CLO3D}
     \label{fig:renderedCLO}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/renderfront.png}
+        \caption{Front}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/renderside.png}
+        \caption{Side}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/render backpng.png}
+        \caption{Back}
+    \end{subfigure}
+    \caption{Custom shirt draped on personal scan in CLO3D}
+    \label{fig:personal_garment}
 \end{figure}

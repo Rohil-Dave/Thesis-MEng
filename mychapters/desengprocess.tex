@@ -72,32 +72,36 @@ Notions (bindings, buttons, iron on interfacings, etc.) are not considered. Thes
 \subsection{Pattern Parameterisation}
 This section dissects the original garment pattern into individual segments for parameterization. 
 
-There are a total of nine (1x body, 2x neck facing, 4x collar, 2x sleeve) pieces that make up the block (Figure \ref{fig:original pattern pieces}). Note that D and E combine to form the sleeve piece. There are no side seams on the shirt as there is just a single body piece, not a separate front and back. Parameters are defined in 
+There are a total of nine (1x body, 2x neck facing, 4x collar, 2x sleeve) pieces that make up the block (Figure \ref{fig:original pattern pieces}). Note that D and E combine to form the sleeve piece. There are no side seams on the shirt as there is just a single body piece, not a separate front and back. Parameters are defined in Table \ref{tab:pattern params} and visualised in Figure \ref{fig:pattern params}.
 \begin{figure} [H] 
     \centering 
     \includegraphics[width = \textwidth]{Images/originalpattern_pieces.png} 
     \caption{Shirt block pattern pieces}
     \label{fig:original pattern pieces}
 \end{figure}
-
-
-\begin{table} [H] 
+\begin{table}[H]
     \centering
-    \begin{tabular}{p{2cm}|p{5cm}} 
-        \textbf{Shortform} & \textbf{Parameter}\\
-        \hline 
-        pw& pattern width\\
-        ph& pattern height\\
-        cw& collar piece width\\
-        ch& collar piece height\\
-        bw& neck facing width\\
-        bh& neck facing height\\
-        sd& sleevehead curve depth\\
-        sr& sleevehead curve radius\\
-        al& armhole length
-        \end{tabular}
+    \captionsetup{font=small}
+    \begin{tabular}{
+        >{\centering\arraybackslash}p{2cm} | 
+        >{\arraybackslash}p{5cm}
+    }
+        \toprule
+        \textbf{Shortform} & \textbf{Parameter} \\
+        \midrule
+        pw & pattern width \\
+        ph & pattern height \\
+        cw & collar piece width \\
+        ch & collar piece height \\
+        bw & neck facing width \\
+        bh & neck facing height \\
+        sd & sleevehead curve depth \\
+        sr & sleevehead curve radius \\
+        al & armhole length \\
+        \bottomrule
+    \end{tabular}
     \caption{Pattern Parameters Table}
-    \label{tab:pattern params}
+    \label{tab:pattern_params}
 \end{table}
 \begin{figure} [h]
     \centering
@@ -106,72 +110,32 @@ There are a total of nine (1x body, 2x neck facing, 4x collar, 2x sleeve) pieces
     \label{fig:pattern params}
 \end{figure}
 
-The process for parameterising was based on traditional measurements professionals use for a tailored shirt. How these measurements can translate into algorithm for the pattern parameterisation was investigated.
+Due to the interlocking nature of the pattern, changing any one dimension has an effect on multiple pieces.
+For example, increasing the pattern width enlarges the sleeve pieces. Some nuance and compromise is needed to scale pieces effectively while still maintaining the pattern’s rectangle. 
+Calculating the pattern width and pattern height from body measurements is key, as the internal dimensions will be deduced from them. The fit around the bodice and the shirt length are the main values to be customised. The parameterisation assumes the pattern width will be equal to the largest circumference of the bodice plus the general ease and seam allowance for the body.
+As per Helmersson, the general ease is 25 cm and the seam allowance of the button placket, pleats, etc. is another 6 cm. Therefore:
+Pattern width = Max bodice circumference + 25 + 6   (eq. 3.1)
 
-By looking at the pattern, we quickly realise that scaling one dimension has an effect in multiple pieces. For example, increasing the pattern width will also enlarge the sleeve pieces. Therefore, it requires some nuance and compromise to be able to scale pieces effectively while still keeping the rectangular nature of the overall pattern. We are primarily concerned with calculating the pattern width and pattern height as these define the pattern at large. We are less focused on the definition of each piece's dimensions at input because some of these factors will be deduced by the pattern width and pattern height along with the layout of the pieces given the fabric bolt used to make the garment.
+Shirt length is a matter of choice and not a strict body measurement. The collar piece height also influences the overall pattern height. Helmersson keeps that constant too at 25 cm plus another 2.5 cm hem allowance. Therefore
+	Pattern Height = Desired shirt length + 25 + 2.5    (eq 3.2)
 
-The fit around the bodice is the primary factor to be customised. Given this, the process starts by defining what will be kept constant. The collar piece is kept constant inline with Helmersson's dimension suggestions with collar piece width of 9.5 cm and collar piece height of 25 cm. It becomes clear that a segment is shared between the collar piece (C) and the sleeve piece (D). Collar piece height corresponds to the sleeve length measured from the shoulder point to the sleeve end(barring any hemming for now). The first relationship between pattern and finished garment discovered is that the sleeve length equals the collar piece height, 25 cm in this case.
+Collar piece height corresponds to the sleeve length measured from the shoulder point to the sleeve end (barring any hemming). The dimension of the sleeve top edge is a function of the pattern width and collar width (+ seam allowance). Again, Helmersson keeps the collar piece width (seam allowance inclusive)
+ constant at 9.5cm. From the pattern diagram it is clear that:
+	Pattern width = 4 * collar width + 2 * sleeve edge
+	Or, sleeve edge = (pattern width - 4 * collar width ) / 2  (e.q. 3.3)
 
-The placement of the notches used to determine the finished pleat size and the button placket are also kept constant for everyone. For now, the general ease of the garment will also be constant with Helmersson's suggestion of 25 cm. 
+By definition, the armhole length is half the sleeve top edge.
+	Armhole length = (pattern width - 4 * collar width ) / 2  (e.q. 3.4).
+In this project, the neck facing template (B) and the sleevehead template (E) shapes have been simplified using primary geometry like lines and circles. The shapes were simplified not only to make the pattern more standardised and constructing the pattern in DXF file format easier. 
+Template B has a constant width and height equal to 14 cm. To get the rounded edge we are using a circular whose radius is half that. 
+	Bw = bh = 14
+	Bx = by  = br = 14 / 2 = 7
 
-The collar piece height also influences the overall pattern height. The height of the body piece (A) plus the collar piece height equals the total pattern height. From the center back linein the pattern, it is evident that the height of the body piece can be related to the shirt length measured from the center back base of the neck to the finished hem at the bottom. Shirt length is a personal choice and not a strict body measurement based input. The garment will employ a standard shirt 2.5 cm hem at the bottom for a clean finished. This hem allowance must be considered as it will come from the original fabric piece in maintaining zero waste design.
-\begin{equation}
-    \mathrm{pattern\ height} = \mathrm{desired\ shirt\ length} + \mathrm{collar\ piece\ height} + \mathrm{hem\ allowance}
-    \label{eq:pattern height}
-\end{equation}
+For the sleevehead curve template (E),  a simplified version of Helmersson’s emplate is using a sleevehead curve radius of 14cm and a sleevehead curve depth of 3.5cm.
 
-with shortform and constants,
+Helmersson’s size chart assumes a range of 95 cm to 125 cm for maximum bodice circumference. We will use this ideal range to determine if a person gets the standard template size. People below this range will get a slightly smaller template size and people above this range will get a bigger template size. 
 
-$ph = desired shirt length + ch + hem allowance$
-
-if shirt length is 65 cm 
-
-$ph = desired shirt length + 25 + 2.5$
-
-The parameterisation assumes the pattern with will be equal to the largest circumference of the bodice plus the general ease and sew allowance for the body. We still intend to keep the aesthetic of the garment while provide fit to extend garment utility in terms of more wear time/uses.
-\begin{equation}
-    \mathrm{pattern\ width} = \mathrm{largest\ bodice\ circumference} + \mathrm{general\ ease} + \mathrm{sew\ allowance}
-    \label{eq:pattern width}
-\end{equation}
-
-with short and constants,
-
-$pw = largest bodice circumference + 25 + 6$
-
-From the pattern, it is clear that scaling pattern width had an effect on the sleeve pieces. The collar piece widths (cw) are kept constant. By looking at the top border of the pattern, we see that pattern width also equals four collar piece widths plus two (one for each sleeve piece) top edge segments of the of the sleeve.
-
-pw = 4*cw + 2*(sleeve top edge)
-
-therefore
-
-sleeve top edge = (pw - 4*cw) / 2
-
-The sleeve top edge represented the sleeve circumference. Therefore, scaling up the pattern width will also scale up the sleeve circumference i.e. larger bodies will have baggier sleeves.
-The armhole length (al) is equal to half of the sleeve top edge. This is because when the sleeve is sewed it needs to fit in the armhole with is formed when cutting the armhole length at the middle of the sleevehead curve and sewing the shoulder seams.
-
-al = (pw - 4*cw) / 4
-
-What is left is deciding how to scale the template sizes. Starting from her pattern as inspiration, we are simplifying the pattern even further to use simpler shapes when constructing these templates. Based on her size chart we are identifying an "ideal" largest circumference range for this pattern based on her chart and using her expertise as a fashion designer. This ideal range for the pattern then is 95cm to 125cm. We will use this ideal range to determine if a person gets the standard template size. People below this range will get slight smaller template size and people above this range will get bigger template size. Helmersson claims that beyond 25 cm of these measurements then the pattern might not be suited for you, we are aiming to make it more inclusive and account for other custom sizes with our parameterisation. 
-
-For the standard neck facing template (B) size, We use square and circle inscribed in that square for the simple shape. Remember that these pieces help form the button placket, front neck line, and the overall pieces for the back neck facing. The facing piece height and width equal each other at 14 cm.
-
-bw = bh = 14 cm
-
-The facing piece curve horizontal line segment and facing piece curve vertical line segment are equal to each other and also equal to half of the facing piece width.
-
-bx = by = (bw/2) = 14/2 = 7 cm
-
-This 7 cm will also be the radius of the circle used to form the curve corner of the piece. So it is a quarter circle with radius of 7 cm forming and its end joins with the ends of horizontal and vertical line segments of the piece.
-
-For the sleevehead curve template (E), an approximated and simplified verson of BH's template is using a sleevehead curve radius of 14cm and and sleevehead curve depth of 3.5cm. Notice that the sleevehead curve radius and facing piece width/height are the same. We keep this same relationship for deciding the other two template sizes.
-
-For below 95 cm largest circ, we decrease the template size of facing piece width and height as 12 cm, sleevehead curve radius at 12 cm, and sleevehead curve depth at 3.0cm.
-For above 125 cm largest circ, we increase the template size of facing piece width and height as 16 cm, sleevehead curve radius at 16 cm, and sleevehead curve depth at 4.0cm.
-So it is a ±2 cm for the B5 piece width/height and sleevehead curve radius, and a ±0.5cm for the sleevehead curve depth.
-
-The sleevehead curve depth influences the point where the sleeve attaches to the body at the shoulder point. We need to consider appropriate scaling of neck facing and sleevehead curve template because it affects the shoulder seam lengths. If these were always kept constant, it is possible that for smaller pattern widths it will eat into the top shoulder seams length and not fit the person because it is too small. This is a point we need to test for and do in the workshop. We will test if we are being too aggressive with this or not and if there are any not as obvious consequences.
-
-The shapes were simplified not only to make recreating the pattern easier and more standardized but also for ease of use when constructing the pattern in DXF file format. The simple shapes help to streamline and ensure lines were meet at shared points, essential for ensuring the closed shape. 
+The sleevehead curve depth influences where the sleeve attaches to the body at the shoulder point. Scaling of the neck facing and sleevehead curve need to be appropriate as it affects the shoulder seam lengths. If these were kept constant, it is possible that for smaller pattern widths they will eat into the top shoulder seams length and not fit the person well. These assumptions need to be tested in the workshop study.
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 % FRAMEWORK OUTPUTS
