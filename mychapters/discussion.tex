@@ -1,31 +1,20 @@
 \chapter{Discussion}
+These are the learnings from this project. A few shortcomings were discovered through this process, there were some positive outcomes and a lot of new interesting possibilities also opened up. 
+The study did accomplish its goals of developing a parameterised pattern, suggesting an ideal bolt width, and computing cut loss and providing recoupment and segmentation / reconstruction strategies for a given bolt width.
 
 \section{Findings}
-\subsubsection{Precisions}
-All body measurements used in the workshop were rounded up to 0.5cm ceilings. While this does affect the fit (slightly looser) and efficiency (minimally higher) it does not affect the analysis that much. The reason for this is that this pattern is not machine cut. The target audience is confident beginners and not industrial tailors. Therefore, precise millimetre level cutting was not a fair expectation.
+\subsection{Precisions}
+All body measurements from the workshop needed to be rounded up to 0.5cm ceilings. While this does affect the fit (slightly looser) and efficiency (minimally higher) it does not affect the analysis that much. The reason is that this pattern is not machine cut. The target audience is confident beginners and not industrial tailors. Therefore, precise millimetre level cutting was difficult and not a fair expectation
+
+\subsection{Sewing Consistency}
+The workshop study had participants sewing their own garments. This introduced variability in the finished clothing as they all had different skill levels. It proved difficult to evaluate the fit as the likert data shows. It might have been prudent to have a limited number of sewers and get more people to participate in the study.
+
+\subsection{Body Scans Study}
+Ideal bolt widths were computed for all 100 scans, with a mean efficiency of 98.1\%. This shows that our parameterisation is much better than the industry average of about 85\%. 
+Analysis was also run on the impact of constraining the entire cohort to just one bolt width. Bolt widths from 110 cm to 165 cm were tested. For this cohort a bolt width of 140 cm resulted in the best mean efficiency (88.8\%). In the range selected, only rotation was needed to fit the pattern into smaller bolt widths.
+
 
 \section{Limitations}
-
-\subsection{Method Limitations}
-pattern generalised
-
-constants: collar, sleevehead curve, neck opening
-
-agressive scaling factors:
-
-neck circ should influence neck face
-
-design should be dynamic, increase ease for circs greater than 100 cm
-
-manual measure may have error
-
-scanning tech not as accessible
-
-sewing inconsistency
-
-A limitation of this workshop was that there was only one bolt of calico fabric (150cm) available. This means that the participants could not all get their ‘ideal’ bolt widths for true zero waste design. This will show up in lower efficiency scores and increased cut loss.
-
-\subsection{Data Limitations}
 self-reported data, which can be subject to biases and inaccuracies. subjective assessments of fit and comfort may vary based on personal preferences and experiences. 
 
 controlled conditions for waste
@@ -36,26 +25,33 @@ only 8 participants only 6 finished
 
 time resource constraints
 
+\subsection{Method Limitations}
+The tail0r framework made a few design choices in parameterising the pattern. Helmersson's original pattern kept the collar, sleevehead curve, and the neck opening constant while limiting the target audience to a smaller band of bodice circumferences.
+tail0r’s scaling of these values even though ‘banded’ was aggressive and did not consider all relevant body measurements (e.g. neck circumference for neck face). The design was not dynamic, ease was held constant and should have increased for larger bodices.
+Body measurements’ gathering for the workshop was a manual process and prone to error. Scanning technology was not accessible. 
+A major limitation of the workshop was that there was only one bolt of calico fabric (150cm). This skewed the efficiency results. It does raise an interesting point though that using an available bolt of non optimal width might be more eco-conscious than specifically buying new fabric. These tradeoffs are common in boutique settings with limited inventory
+
+\subsection{Data Limitations}
+The workshop study had limited data. There were only 8 participants and only 6 produced a garment due to time constraints. It is difficult to generalise and gain meaningful insights from such a small data set.
+
+Subjective assessments of fit and comfort may vary based on personal preferences. Self-reported data is subject to biases and inaccuracies.
+
+The Mendeley dataset was large but the cohort was very similar, it would be interesting to test on a more diverse dataset which might have resulted in some interesting findings and better test the symmetry and breakout strategies.
+
+
 \subsection{tail0r Limitations}
+There were issues working with CLO 3D and the DXF file format. This process does generate a DXF file suitable for CLO 3D, and once the appropriate sewing properties are labouriously defined and pieces are positioned, the garment gets draped onto an avatar. Defining layers easily allowed for paths to be joined without affecting other pieces. Though sometimes pattern segments had to be manipulated in Adobe Illustrator to get the shapes to close and be usable in CLO 3D. 
 
-Sometimes, these segments had to be manipulated in Adobe Illustrator to get the shapes to close and be usable in CLO 3D. Defining layers easily allowed for paths to be joined with out affecting other pieces. A future enhancement would be to get this to work directly out of Python and ezdxf settings. This process does generate a DXF file suitable for CLO 3D, and once the appropriate sewing properties are defined and pieces are positioned, the garment gets draped onto an avatar. This can then be rendered and shown to the end user as a base visual indication of fit and style.
-Limitations with CLO
+There were other limitations to CLO 3D. Posture mode is quite static and doesn’t allow for varied poses. Getting the garment to drape is cumbersome. It does not give much more than a static visual representation of the fit, sans any animation.
 
-Posture mode is quite static in CLO and does not allow for varied postures
-
-So we are simulating the fit in many different natural poses
-
-Does not give much more than a static visual representation of fit
 
 \section{Outcome Impact and Potential}
+Parameterisation of a zero-waste pattern works. This project shows that it is possible to be mindful of garment waste without sacrificing utility. Independent / smaller scale operations can employ cutting edge techniques to make bespoke garments with less waste. This paradigm empowers anyone with a basic understanding of sewing to use such techniques.
 
 \section{Further Work}
-parameter tuning, neck, shoulder etc
+There is a lot of work identified in addressing some of the limitations already discussed.
+For this particular pattern, the parameters need to be tuned better to account for neck and shoulder sizes, to define more appropriate settings for ease. Other embellishments and mendings can also be investigated.
 
-building in fabric properties
-
-building in costing?
-
-automation of pipeline
-
-parameterise other patterns
+The parameterisation process can be extended to other zero waste patterns as well. These may reveal heuristics that work better with scaling.
+The tail0r pipeline could also be fine tuned, more fully automated, and more attention paid to the UX. 
+Lastly the analysis can be extended to fabric properties and costing.
