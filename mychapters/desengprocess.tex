@@ -188,7 +188,7 @@ The program creates the following outputs:
 \end{enumerate}
 
 \subsubsection{DXF Pattern File}
-The DXF file format is a standard of digital garment patterns. This format can be imported into many different pattern and 3D fashion applications including CLO 3D. The `ezdxf’ Python library was used for creating the DXF files of the pattern. Line, spline, lightweight polyline, and arc primitives were built into base functions to map out the geometry. The accompanying `ezdxf viewer’ was used for output verification.
+The DXF file format is a standard of digital garment patterns. This format can be imported into many different pattern and 3D fashion applications including CLO 3D. The `ezdxf’ Python library \cite{noauthor_spline_nodate} was used for creating the DXF files of the pattern. Line, spline, lightweight polyline, and arc primitives were built into base functions to map out the geometry. The accompanying `ezdxf viewer’ was used for output verification.
 
 Each pattern piece created via DXF needs to be a closed shape for successful import (Figure \ref{fig:successful import}). Pieces that share borders need to have their own representation of the shared segment and thus had to be redrawn as needed for the number of pieces they help define. This was achieved by defining layers (Figure \ref{fig:layer toggle}) for each piece type within the document modelspace. Figure \ref{fig:example dxfs} shows examples of the DXF pattern outputs.
 
