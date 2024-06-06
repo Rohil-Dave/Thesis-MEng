@@ -26,7 +26,7 @@ Key goals of the project include:
 \section{Methodology}
 Figure \ref{fig:tail0r pipeline} outlines the tail0r pipeline.
 
-\begin{figure} [h]
+\begin{figure} [H]
     \centering
     \includegraphics[width = \textwidth]{Images/tailor pipeline.png}
     \caption{tail0r Pipeline}
@@ -119,19 +119,13 @@ For example, increasing the pattern width enlarges the sleeve pieces. Some nuanc
 Calculating the pattern width and pattern height from body measurements is key, as the internal dimensions will be deduced from them. The fit around the bodice and the shirt length are the main values to be customised. The parameterisation assumes the pattern width will be equal to the largest circumference of the bodice plus the general ease and seam allowance for the body.
 As per Helmersson, the general ease is 25 cm. The seam allowance around the bodice is 6 cm. Therefore: 
 \begin{equation}
-    \begin{align*}
-        pattern\ width = max\ bodice\ circumference + general\ ease + seam\ allowance \\
-        pattern\ width = max\ bodice\ circumference + 25 + 6
-    \end{align*}
+    pattern\ width = max\ bodice\ circumference + 25 + 6
     \label{eq:pattern width}
 \end{equation}
 
 Shirt length is a matter of choice and not a strict body measurement. The collar piece height also influences the overall pattern height. Helmersson keeps that constant at 25 cm. A 2.5 cm hem allowance will finish the bottom edge. Therefore:
 \begin{equation}
-    \begin{aligned}
-        pattern\ height = shirt\ length + collar\ piece\ height + hem\ allowance \\
-        pattern\ height = shirt\ length + 25 + 2.5
-    \end{aligned}
+    pattern\ height = shirt\ length + 25 + 2.5
     \label{eq:pattern height}
 \end{equation}
 
@@ -195,7 +189,7 @@ To achieve virtual draping, sew lines need to be defined and pieces positioned a
     \centering
     \includegraphics[width = 0.5\textwidth]{Images/sew in CLO.png}
     \caption{CLO 3D simulation environment}
-    \label{fig:successful import}
+    \label{fig:sew in CLO}
 \end{figure}
 
 \begin{figure} [H]
