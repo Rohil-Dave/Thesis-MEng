@@ -1,22 +1,10 @@
 \chapter{Results}
 
 \section{Workshop Study}
-The workshop study had eight participants a mean maximum bodice circumferemce of 99.96 cm, median of 98.50 cm and a standard deviation of 8.00 cm. The mean shirt length is 60.36 cm, median of 59.70 cm, and a standard deviation of 6.99 cm. Six of eight completed the entire study, reaching finished garment stage and fit evaluation. Their garments are seen in Figure \ref{fig:workshop_garments}
-\begin{figure}[htb]
-    \centering
-    \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{Images/Workshop_max_circ_Boxplot.png}
-        \caption{}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{Images/Workshop_desired_shirt_length_Boxplot.png}
-        \caption{}
-    \end{subfigure}
-    \caption{}
-\end{figure}
+The workshop study had 8 participants, 6 of whom reach the finished garment stage and fit evaluation (Figure \ref{fig:workshop_garments}). All participants used a 150 cm bolt.
+
+They had a mean maximum bodice circumference of 99.96 cm, median of 98.50 cm and a standard deviation of 8.00 cm (Figure \ref{fig:workshop_max_circ}). The mean shirt length was 60.36 cm, median of 59.70 cm, and a standard deviation of 6.99 cm (Figure \ref{fig:workshop_shirt_length}).
+Figure \ref{fig:workshop_bolt_widths} shows the difference between the ideal bolt widths and the used bolt. Figure \ref{fig:workshop_efficiency_bar} shows the difference between the ideal and used efficiency values. Efficiencies and cut loss areas distributions are shown in Figure \ref{fig:workshop_efficiency_boxplot} and Figure \ref{fig:workshop_cut_loss_area}.
 \newpage
 \begin{figure} [H]
     \centering
@@ -25,56 +13,73 @@ The workshop study had eight participants a mean maximum bodice circumferemce of
     \label{fig:workshop_garments}
 \end{figure}
 
-\begin{figure} [H]
+\begin{figure}[H]
     \centering
-    \includegraphics[width = 0.8\textwidth]{Images/fit likert stacked bar.png}
-    \caption{Fit Likert Scales}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/Workshop_max_circ_Boxplot.png}
+        \caption{Max bodice circumference}
+        \label{fig:workshop_max_circ}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/Workshop_desired_shirt_length_Boxplot.png}
+        \caption{Shirt length}
+        \label{fig:workshop_shirt_length}
+    \end{subfigure}
+    \caption{Workshop participant input measurement boxplots}
 \end{figure}
-\begin{figure} [H]
-    \centering
-    \includegraphics[width = 0.8\textwidth]{Images/comfort likert stacked bar.png}
-    \caption{Comfort Likert Scales}
-\end{figure}
-
 
 \begin{figure}[H]
     \centering
     \begin{subfigure}[b]{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{Images/Workshop_efficiency_ideal_Boxplot.png}
+        \includegraphics[width=\textwidth]{Images/Workshop_BoltWidths_Scatter.png}
         \caption{}
+        \label{fig:workshop_bolt_widths}
     \end{subfigure}
-    \hfill
+    \vfill
     \begin{subfigure}[b]{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{Images/Workshop_efficiency_used_Boxplot.png}
+        \includegraphics[width=\textwidth]{Images/Workshop_Eff_bar.png}
         \caption{}
+        \label{fig:workshop_efficiency_bar}
+    \end{subfigure}
+    \caption{Workshop ideal vs used bolt widths (a) and efficiencies (b)}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/Workshop Efficiencies_Boxplot.png}
+        \caption{}
+        \label{fig:workshop_efficiency_boxplot}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/Workshop Cut Loss Area_Boxplot.png}
+        \caption{}
+        \label{fig:workshop_cut_loss_area}
     \end{subfigure}
     \caption{}
 \end{figure}
 
-\begin{figure} [H]
-    \centering
-    \includegraphics[width = 0.5\textwidth]{Images/Workshop_CutLossArea_Bar.png}
-    \caption{Workshop Cut Loss Area}
-\end{figure}
-\begin{figure} [H]
-    \centering
-    \includegraphics[width = 0.5\textwidth]{Images/Workshop_CutLossWidth_Bar.png}
-    \caption{Workshop Cut Loss Width}
-\end{figure}
-\begin{figure} [H]
-    \centering
-    \includegraphics[width = \textwidth]{Images/Workshop_Eff_bar.png}
-    \caption{Workshop Fabric Efficiency}
-\end{figure}
-\begin{figure} [H]
-    \centering
-    \includegraphics[width = \textwidth]{Images/Workshop_BoltWidths_Scatter.png}
-    \caption{Workshop Ideal Bolts}
-\end{figure}
+Lastly, responses to the Likert scales are graphed (Figures \ref{fig:fit_likert} and \ref{fig:comfort_likert}), showing the qualititative analysis of the participants' satisfaction with the fit and cofort of their finished garments.
 
-Efficiency, bolt width, cut loss width, and cut loss area for Workshop Study comparing ideal bolt and actual used bolt. All efficiencies when using ideal bolt width are greater than 95\%.
+\begin{figure} [H]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{Images/fit likert stacked bar.png}
+    \caption{Fit Likert Scales}
+    \label{fig:fit_likert}
+\end{figure}
+\begin{figure} [H]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{Images/comfort likert stacked bar.png}
+    \caption{Comfort Likert Scales}
+    \label{fig:comfort_likert}
+\end{figure}
 
 
 \section{Body Scans Study}
@@ -178,6 +183,7 @@ For the range of bolt widths between 110 and 160 cm, each pattern generated for 
 \textbf{ADD recoup of cut loss area due to embellishment}
 
 \section{Personal Case Study}
+Using the parameterisation method defined, the author's pattern width and pattern height is 128.5 cm and 98.5 cm, respectively. The obj file obtained from the 3D scan was imported into CLO3D as the avatar. The pattern pieces were both virtually sewed and draped (Figure \ref{fig:renderedCLO}) and the physically cut and sewed into the tangible garment (Figure \ref{fig:personal_garment}).
 
 \begin{figure}[H]
     \centering
@@ -190,7 +196,7 @@ For the range of bolt widths between 110 and 160 cm, each pattern generated for 
     \begin{subfigure}[b]{0.3\textwidth}
         \centering
         \includegraphics[width=\textwidth]{Images/renderside.png}
-        \caption{Back}
+        \caption{Side}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.3\textwidth}
@@ -199,4 +205,12 @@ For the range of bolt widths between 110 and 160 cm, each pattern generated for 
         \caption{Back}
     \end{subfigure}
     \caption{Custom shirt draped on personal scan in CLO3D}
+    \label{fig:renderedCLO}
+\end{figure}
+
+\begin{figure} [H]
+    \centering
+    \includegraphics[width = \textwidth]{Images/Mendeley_Bar.png}
+    \caption{Custom shirt sample}
+    \label{fig:personal_garment}
 \end{figure}
