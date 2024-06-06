@@ -70,24 +70,22 @@ Notions (bindings, buttons, iron on interfacings, etc.) are not considered. Thes
 %%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Pattern Parameterisation}
-Now that the original garment type is understood, we can dissect the pattern into individual segments for parameterisation.
+This section dissects the original garment pattern into individual segments for parameterization. 
+
+There are a total of nine (1x body, 2x neck facing, 4x collar, 2x sleeve) pieces that make up the block (Figure \ref{fig:original pattern pieces}). Note that D and E combine to form the sleeve piece. There are no side seams on the shirt as there is just a single body piece, not a separate front and back. Parameters are defined in 
 \begin{figure} [H] 
     \centering 
     \includegraphics[width = \textwidth]{Images/originalpattern_pieces.png} 
     \caption{Shirt block pattern pieces}
+    \label{fig:original pattern pieces}
 \end{figure}
-There are a total of nine (1x body, 2x neck facing, 4x collar, 2x sleeve) pieces that make up the block. Note that D and E combine to form the sleeve piece. There are no side seams on the shirt as there is just a single body piece, not a separate front and back.
 
-\begin{table} [H] % this tells the compiler that a table environment is starting
-    \centering % this puts it in the horizontal centre of the page
-    %\rowcolors{1}{}{Gray} % this sets up the alternating grey/white background
-    \begin{tabular}{p{2cm}|p{5cm}} % this sets up the tabular environment ant states the width of the columns, you could use an equation here using the \textwidth, but i have no experience with this. 
-    
-        %the following lines populate the table with data. They follow the pattern
-        % item & item & item & item \\
-        % where the ampersand denotes a vertical line, and the double slash, a new line.
+
+\begin{table} [H] 
+    \centering
+    \begin{tabular}{p{2cm}|p{5cm}} 
         \textbf{Shortform} & \textbf{Parameter}\\
-        \hline % this produces a horizontal line, this could be used elsewhere in the table
+        \hline 
         pw& pattern width\\
         ph& pattern height\\
         cw& collar piece width\\
@@ -99,11 +97,13 @@ There are a total of nine (1x body, 2x neck facing, 4x collar, 2x sleeve) pieces
         al& armhole length
         \end{tabular}
     \caption{Pattern Parameters Table}
+    \label{tab:pattern params}
 \end{table}
-\begin{figure} [h] % opens the figure environment. the '[H]' forces the image to be Here
-    \centering % puts the image in the horizontal centre of the page
-    \includegraphics[width = \textwidth]{Images/pattern params.png} %this tells latex what graphics to include. I put my images in an 'Images' folder to aid file management, hence the Images/ before the file name. the width bit before allows you to alter the width of the image. It is also possible to use scale as well as using equations with the textwidth to make it say half the text width.
+\begin{figure} [h]
+    \centering
+    \includegraphics[width = \textwidth]{Images/pattern params.png}
     \caption{Pattern Parameters Diagram}
+    \label{fig:pattern params}
 \end{figure}
 
 The process for parameterising was based on traditional measurements professionals use for a tailored shirt. How these measurements can translate into algorithm for the pattern parameterisation was investigated.
