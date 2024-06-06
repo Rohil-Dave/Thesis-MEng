@@ -72,7 +72,8 @@ Notions (bindings, buttons, iron on interfacings, etc.) are not considered. Thes
 \subsection{Pattern Parameterisation}
 This section dissects the original garment pattern into individual segments for parameterization. 
 
-There are a total of nine (1x body, 2x neck facing, 4x collar, 2x sleeve) pieces that make up the block (Figure \ref{fig:original pattern pieces}). Note that D and E combine to form the sleeve piece. There are no side seams on the shirt as there is just a single body piece, not a separate front and back. Parameters are defined in Table \ref{tab:pattern params} and visualised in Figure \ref{fig:pattern params}.
+There are a total of nine (1x body, 2x neck facing, 4x collar, 2x sleeve) pieces that make up the block (Figure \ref{fig:original pattern pieces}). Note that D and E combine to form the sleeve piece. There are no side seams on the shirt as there is just a single body piece, not a separate front and back. Parameters are defined in Table \ref{tab:pattern_params} and visualised in Figure \ref{fig:pattern params}.
+\newpage
 \begin{figure} [H] 
     \centering 
     \includegraphics[width = \textwidth]{Images/originalpattern_pieces.png} 
@@ -103,7 +104,8 @@ There are a total of nine (1x body, 2x neck facing, 4x collar, 2x sleeve) pieces
     \caption{Pattern Parameters Table}
     \label{tab:pattern_params}
 \end{table}
-\begin{figure} [h]
+\newpage
+\begin{figure} [H]
     \centering
     \includegraphics[width = \textwidth]{Images/pattern params.png}
     \caption{Pattern Parameters Diagram}
@@ -111,29 +113,42 @@ There are a total of nine (1x body, 2x neck facing, 4x collar, 2x sleeve) pieces
 \end{figure}
 
 Due to the interlocking nature of the pattern, changing any one dimension has an effect on multiple pieces.
-For example, increasing the pattern width enlarges the sleeve pieces. Some nuance and compromise is needed to scale pieces effectively while still maintaining the pattern’s rectangle. 
+
+For example, increasing the pattern width enlarges the sleeve pieces. Some nuance and compromise is needed to scale pieces effectively while still maintaining the pattern’s rectangle.
+
 Calculating the pattern width and pattern height from body measurements is key, as the internal dimensions will be deduced from them. The fit around the bodice and the shirt length are the main values to be customised. The parameterisation assumes the pattern width will be equal to the largest circumference of the bodice plus the general ease and seam allowance for the body.
-As per Helmersson, the general ease is 25 cm and the seam allowance of the button placket, pleats, etc. is another 6 cm. Therefore:
+As per Helmersson, the general ease is 25 cm. The seam allowance around the bodice is 6 cm. Therefore: 
 \begin{equation}
-    \mathrm{pattern\ height} = \mathrm{desired\ shirt\ length} + \mathrm{collar\ piece\ height} + \mathrm{hem\ allowance}
+    \begin{align*}
+        pattern\ width = max\ bodice\ circumference + general\ ease + seam\ allowance \\
+        pattern\ width = max\ bodice\ circumference + 25 + 6
+    \end{align*}
+    \label{eq:pattern width}
+\end{equation}
+
+Shirt length is a matter of choice and not a strict body measurement. The collar piece height also influences the overall pattern height. Helmersson keeps that constant at 25 cm. A 2.5 cm hem allowance will finish the bottom edge. Therefore:
+\begin{equation}
+    \begin{aligned}
+        pattern\ height = shirt\ length + collar\ piece\ height + hem\ allowance \\
+        pattern\ height = shirt\ length + 25 + 2.5
+    \end{aligned}
     \label{eq:pattern height}
 \end{equation}
-Pattern width = Max bodice circumference + 25 + 6   (eq. 3.1)
 
-Shirt length is a matter of choice and not a strict body measurement. The collar piece height also influences the overall pattern height. Helmersson keeps that constant too at 25 cm plus another 2.5 cm hem allowance. Therefore
-	Pattern Height = Desired shirt length + 25 + 2.5    (eq 3.2)
-
-Collar piece height corresponds to the sleeve length measured from the shoulder point to the sleeve end (barring any hemming). The dimension of the sleeve top edge is a function of the pattern width and collar width (+ seam allowance). Again, Helmersson keeps the collar piece width (seam allowance inclusive)
- constant at 9.5cm. From the pattern diagram it is clear that:
-	Pattern width = 4 * collar width + 2 * sleeve edge
+Collar piece height corresponds to the sleeve length measured from the shoulder point to the sleeve end (barring any hemming). The dimension of the sleeve top edge is a function of the pattern width and collar width (+ seam allowance). Again, Helmersson keeps the collar piece width (seam allowance inclusive) constant at 9.5 cm. From the pattern diagram it is clear that:
+\begin{equation}
+    pattern\ width = 4 * collar\ width + 2 * sleeve\ edge
+    \label{eq:pattern width collar}
+\end{equation}
+	
 	Or, sleeve edge = (pattern width - 4 * collar width ) / 2  (e.q. 3.3)
 
 By definition, the armhole length is half the sleeve top edge.
 	Armhole length = (pattern width - 4 * collar width ) / 2  (e.q. 3.4).
-In this project, the neck facing template (B) and the sleevehead template (E) shapes have been simplified using primary geometry like lines and circles. The shapes were simplified not only to make the pattern more standardised and constructing the pattern in DXF file format easier. 
-Template B has a constant width and height equal to 14 cm. To get the rounded edge we are using a circular whose radius is half that. 
-	Bw = bh = 14
-	Bx = by  = br = 14 / 2 = 7
+In this project, the neck facing template (B) and the sleevehead template (E) shapes have been simplified using primary geometry like lines and circles. The shapes were simplified to make the pattern more standardised and constructing the pattern in DXF file format easier. 
+Template B has a constant width and height equal to 14 cm. To get the rounded edge we are using a circular whose radiuRJs is half that. 
+	bw = bh = 14
+	bx = by = br = 14 / 2 = 7
 
 For the sleevehead curve template (E),  a simplified version of Helmersson’s emplate is using a sleevehead curve radius of 14cm and a sleevehead curve depth of 3.5cm.
 
@@ -158,34 +173,27 @@ The program creates the following outputs:
 \subsubsection{DXF Pattern File}
 The DXF file format is a standard of digital garment patterns. This format can be imported into many different pattern and 3D fashion applications including CLO 3D. The `ezdxf’ Python library \cite{noauthor_spline_nodate} was used for creating the DXF files of the pattern. Line, spline, lightweight polyline, and arc primitives were built into base functions to map out the geometry. The accompanying `ezdxf viewer’ was used for output verification.
 
-Each pattern piece created via DXF needs to be a closed shape for successful import (Figure \ref{fig:successful import}). Pieces that share borders need to have their own representation of the shared segment and thus had to be redrawn as needed for the number of pieces they help define. This was achieved by defining layers (Figure \ref{fig:layer toggle}) for each piece type within the document modelspace. Figure \ref{fig:example dxfs} shows examples of the DXF pattern outputs.
+Each pattern piece created via DXF needs to be a closed shape for successful import (Figure \ref{fig:successful import}). Pieces that share borders need to have their own representation of the shared segment and thus had to be redrawn as needed for the number of pieces they help define. This was achieved by defining layers for each piece type within the document modelspace. Figure \ref{fig:example dxfs} shows examples of the DXF pattern outputs.
 
 \begin{figure} [H]
     \centering
-    \includegraphics[width = 0.4\textwidth]{Images/dxf viewer.png}
-    \caption{Layer toggle feature in ezdxf viewer}
-    \label{fig:layer toggle}
-\end{figure}
-
-\begin{figure} [H]
-    \centering
-    \includegraphics[width = \textwidth]{Images/example dxfs.png}
+    \includegraphics[width = 0.8\textwidth]{Images/example dxfs.png}
     \caption{Examples of DXF pattern outputs}
     \label{fig:example dxfs}
 \end{figure}
 
 \begin{figure} [H]
     \centering
-    \includegraphics[width = \textwidth]{Images/suc import.png}
+    \includegraphics[width = 0.8\textwidth]{Images/suc import.png}
     \caption{Successful import in CLO 3D}
     \label{fig:successful import}
 \end{figure}
 
-To achieve virtual draping, sew lines need to be defined and pieces positioned around the avatar (Figure \ref{fig:render}). The process requires several steps and for this garment order is as follows: bodice, sleeves, collar, facings.  This achieves the 
+To achieve virtual draping, sew lines need to be defined and pieces positioned around the avatar (Figure \ref{fig:render}). The process requires several steps and for this garment order is as follows: bodice, sleeves, collar, facings.
 
 \begin{figure} [H]
     \centering
-    \includegraphics[width = \textwidth]{Images/sew in CLO.png}
+    \includegraphics[width = 0.5\textwidth]{Images/sew in CLO.png}
     \caption{CLO 3D simulation environment}
     \label{fig:successful import}
 \end{figure}
@@ -235,9 +243,20 @@ In all these calculations of waste metrics the assumption is that the user cuts 
 
 The efficiency computation are as follows:
 
-cut loss width = ideal bolt width - pattern width \newline
-cut loss area = cut loss width * pattern height \newline
-efficiency = 100 * (1 - (cut loss area/ (pattern width * pattern height))
+\begin{equation}
+    cut\ loss\ width = ideal\ bolt\ width - pattern\ width
+    \label{eq:cut loss width}
+\end{equation}
+\begin{equation}
+    cut\ loss\ area = cut\ loss\ width * pattern\ height
+    \label{eq:cut loss area}
+\end{equation}
+\begin{equation}
+    efficiency = 100 * (1 - (cut\ loss\ area/ (pattern\ width * pattern\ height))
+    \label{eq:cut loss area}
+\end{equation}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 % MITIGATION
